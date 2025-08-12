@@ -1,0 +1,55 @@
+.head-wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.head-top {
+  width: 100%;
+}
+.navi-1 ul {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 100px;
+}
+.navi-1 ul {
+  display: flex;
+  gap: 10px;
+}
+.navi-1 ul li {
+  width: 70px;
+  text-align: center;
+}
+.head-bottom {
+  width: 100%;
+  display: flex;
+}
+.main-logo {
+  width: 500px;
+}
+.main-logo > a {
+  display: block;
+  padding: 0 50px;
+  font-size: 100px;
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 1000;
+}
+.search-bar {
+  width: 600px;
+  height: 70px;
+  justify-content: space-between;
+  max-width: 765px;
+  min-width: 337px;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  padding: 10px 25px;
+  border-radius: 100px;
+  border: solid #ff3c3c 5px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+  flex-direction: row;
+}
+.search-bar input {
+  width: calc(100% - 50px);
+  border: none;
+}
