@@ -1,0 +1,124 @@
+@charset "UTF-8";
+
+@import url(header.css);
+@import url(visual.css);
+@import url(cards.css);
+@import url(news.css);
+@import url(footer.css);
+
+/* 10X10에 있던 default */
+/* html,
+body,
+blockquote,
+caption,
+dd,
+div,
+dl,
+dt,
+fieldset,
+form,
+frame,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+iframe,
+input,
+legend,
+li,
+object,
+ol,
+p,
+pre,
+q,
+select,
+table,
+textarea,
+tr,
+td,
+ul,
+button {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  list-style: none;
+}
+fieldset,
+img {
+  border: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+  font-size: 48px;
+}
+hr {
+  display: none;
+}
+table {
+  border-collapse: collapse;
+  border: 0;
+  empty-cells: show;
+}
+textarea {
+  resize: none;
+}
+input,
+button {
+  border: 0;
+}
+button {
+  overflow: visible;
+}
+em {
+  font-style: normal;
+} */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+ul,
+li {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  color: #333;
+  font: "Orbitron", sans-serif;
+}
+body {
+  width: 100%;
+  font-family: "Noto sans", sans-serif;
+  /* font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
+  /* 있다 폰트적용하며 바꾸기 완.*/
+}
+.wrap {
+  position: relative;
+  margin: auto;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-style: normal;
+  font-size: 24px;
+   color: #333;
+}
+span{
+    color: rgb(240, 70, 70);
+    font-weight: 600;
+    font-size: 18px;
+}
