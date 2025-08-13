@@ -1,0 +1,139 @@
+/* 수정중 */
+.wrap {
+  width: 100%;
+  position: relative;
+}
+.header {
+  width: 100%;
+  position: relative;
+}
+.header-inner {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.header-top {
+  width: 100%;
+  position: relative;
+}
+.navi-1 {
+  width: 100%;
+  position: relative;
+}
+.navi-1 ul {
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+/* Q F12 element에서 flex 창을 눌렀는데
+변경버튼이 뜨지 않는 이유.A 클래스명이 뭔가
+문제가 있언던 걸로 예상...>
+*/
+
+/* 계쩡 주눈 방바구니가 안움직인다.
+어디를 고쳐야할까 A여유공간이 없어서 */
+.navi-1 ul li {
+  width: 10%;
+  min-width: 80px;
+  text-align: center;
+}
+.header-center {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10%;
+  /* Q 갭을 퍼센트로 줬는데
+  반응형과 연관이 있는지
+  픽셀이 나을지 */
+}
+.main-logo {
+  width: 30%;
+}
+.main-logo > a {
+  display: block;
+  padding: 0 30px;
+  font-family: "Baloo 2", sans-serif;
+  font-weight: 1000;
+}
+.main-logo > a > h1 {
+  font-size: clamp(4rem, 5rem, 6rem);
+}
+/* Q폰트웨잇이 어디서
+온걸까..
+ */
+.search-bar {
+  width: 40%;
+  max-width: 60%;
+  min-width: 20%;
+  /* 민위스를 하면 줄어드나?
+  잘 못알아보겠다 */
+  /* 밑에 이게 있었다 ㅎㅎ */
+  /* max-width: 765px;
+  min-width: 337px; */
+  /* 퍼센트가 따로노는것 같은데
+  일정하게 해야할까 */
+  height: 60px;
+  background-color: #fff;
+  display: flex;
+  padding: 10px 25px;
+  border-radius: 30px;
+  border: solid #ff3c3c 5px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+  /* flex-direction: row; */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.search-bar input {
+  width: calc(100% - 30px);
+  border: none;
+  outline: none;
+}
+.header-bottom {
+  width: 100%;
+  position: relative;
+  display: flex;
+}
+.hamburger {
+  width: 20px;
+  height: 20px;
+  display: none;
+  position: relative;
+  /* 버튼의 설정을 지우는것
+     찾아봐야함 */
+}
+.hamburger > span {
+  display: inline-block;
+  /* 아직 인라인 블락과 블락이 헷갈린다 
+  어디서 뭐를 적용해야 할지
+  개념이 부족..*/
+  position: absolute;
+  height: 3px;
+  width: 10px;
+  background: #333;
+  /*@@@@@@@@ 
+  일단 넘어가고 이후에 다시 */
+}
+.navi-2 {
+  width: 100%;
+  position: relative;
+}
+.navi-2 > ul {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  /* 한번씩 안뜰때가 있다.
+   f12에서 볼 수는 없지만
+   적어서 가능! */
+  align-items: center;
+}
+.navi-2 ul li {
+  width: 80px;
+}
+.navi-2 ul li a {
+  text-align: center;
+  display: block;
+}

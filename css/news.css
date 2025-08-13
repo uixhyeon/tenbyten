@@ -1,0 +1,20 @@
+.news-wrap {
+  width: 100%;
+  background-color: #f7f7f7;
+
+  /* 패딩 위치가 헷갈림 */
+  padding: 100px;
+}
+.news-box {
+  width: 80%;
+  background-color: #fff;
+  margin: auto;
+  padding: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+.news-left {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}

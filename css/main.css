@@ -1,8 +1,9 @@
 @charset "UTF-8";
 
-@import url(header.css);
+@import url(headerAf.css);
 @import url(visual.css);
-@import url(cards.css);
+@import url(cardsBf.css);
+@import url(cardsAf.css);
 @import url(news.css);
 @import url(footer.css);
 
@@ -103,6 +104,10 @@ body {
   /* font font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; */
   /* 있다 폰트적용하며 바꾸기 완.*/
 }
+html {
+  font-size: 16px;
+  font-weight: 500;
+}
 .wrap {
   position: relative;
   margin: auto;
@@ -114,11 +119,39 @@ h4,
 h5,
 h6 {
   font-style: normal;
-  font-size: 24px;
-   color: #333;
+  font-size: 2.5rem;
+  color: #333;
 }
-span{
-    color: rgb(240, 70, 70);
-    font-weight: 600;
-    font-size: 18px;
+span {
+  color: rgb(240, 70, 70);
+  font-weight: 600;
+  font-size: 18px;
 }
+/* 인너설정을 해야하는데
+뭘해야 !
+ㅠㅠ 80% 90% 하는게 좋을지
+어디서 어디까지크기가 적절한지
+
+AAAA일단 헤더는 100%로 설정하고
+아래는 80%로 웹 해야지
+*/
+
+/* 있다 햄버거 해야함 */
+
+
+/* 
+기억할 정보
+
+메인 레드 컬러
+#ff3c3c
+
+연한회색
+F7F7F7
+그런데 이회색 어디에있는지..
+
+*/
+/* 
+공통으로 한느게 좋을지 방해가될지
+.navi ul {
+  display: flex;
+} */
