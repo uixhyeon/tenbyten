@@ -51,6 +51,8 @@
       href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Black+Han+Sans&family=Bungee+Inline&family=Bungee+Shade&family=Nosifer&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Titan+One&display=swap"
       rel="stylesheet"
     />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
   <body>
     <div class="wrap">
@@ -89,12 +91,22 @@
           </div>
           <!-- 헤더-바텀 -->
           <div class="header-bottom">
-            <!-- 안보이는 햄버거 -->
-            <button class="hamburger" id="hamburger">
-              <span></span>
-              <span></span>
-              <span></span>
-            </button>
+        <!-- 햄버거 버튼 -->
+<button class="hamburger" id="hamburger">
+  <span></span>
+  <span></span>
+  <span></span>
+</button>
+
+<!-- 네비게이션 메뉴 -->
+<nav class="nav" id="nav">
+  <ul>
+    <li><a href="#">홈</a></li>
+    <li><a href="#">서비스</a></li>
+    <li><a href="#">소개</a></li>
+    <li><a href="#">문의</a></li>
+  </ul>
+</nav>
 
             <nav class="navi navi-2">
               <ul>
@@ -131,6 +143,114 @@
           alt=""
         />
       </div>
+
+<!-- @@@@@@@@@@@@@@@@@@@@@@@@@
+ 
+여기서부터
+-->
+ <!-- 비주얼베너스와이퍼 -->
+    <div class="swiper visualSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <!-- 내용은 자유롭게 구성 그러나 클래스명은 *같게*-->
+          <img src="images/imgi_134_mainRolling_99228_20250807155239.jpg" alt="이미지1" class="web-img" />
+          <img src="images/about-03-1.png" alt="모바일 이미지" class="mo-img">
+          <div class="visual-sw-txt">
+            <p>상품설명</p>
+            <p>가격 : 2000원</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="images/imgi_135_mainRolling_99229_20250807155312.jpg" alt="이미지1" class="web-img" />
+                    <img src="images/about-03-1.png" alt="모바일 이미지" class="mo-img">
+          <div class="visual-sw-txt">
+            <p>상품설명</p>
+            <p>가격 : 2000원</p>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img src="images/imgi_136_mainRolling_99230_20250807155343.jpg" alt="이미지1" class="web-img" />
+                    <img src="images/about-03-1.png" alt="모바일 이미지" class="mo-img">
+          <div class="visual-sw-txt">
+            <p>상품설명</p>
+            <p>가격 : 2000원</p>
+          </div>
+
+
+
+          <!-- 여기맞나.. -->
+               </div>
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+  </div>
+
+        </div>
+      </div>
+    </div>
+    <h1>스와이퍼 적용중</h1>
+    <div class="swiper itemSwiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <img src="images/about-03-1.png" alt="tkdvna1">
+<div class="item-sw-txt">
+    <p>상품설명1</p>
+    <p>가격: 2000dnjs</p>
+</div>
+
+            </div>
+            <div class="swiper-slide">
+                <img src="images/about-03-1.png" alt="tkdvna1">
+<div class="item-sw-txt">
+    <p>상품설명1</p>
+    <p>가격: 2000dnjs</p>
+</div>
+
+            </div>
+            <div class="swiper-slide">
+                <img src="images/about-03-1.png" alt="tkdvna1">
+<div class="item-sw-txt">
+    <p>상품설명1</p>
+    <p>가격: 2000dnjs</p>
+</div>
+
+            </div>
+            <div class="swiper-slide">
+                <img src="images/about-03-1.png" alt="tkdvna1">
+<div class="item-sw-txt">
+    <p>상품설명1</p>
+    <p>가격: 2000dnjs</p>
+</div>
+
+            </div>
+            <div class="swiper-slide">
+                <img src="images/about-03-1.png" alt="tkdvna1">
+<div class="item-sw-txt">
+    <p>상품설명1</p>
+    <p>가격: 2000dnjs</p>
+</div>
+
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       <!-- @메인 -->
 
       <!-- 카드1 -->
@@ -591,5 +711,6 @@
       </footer>
       <!-- v랩 디브 -->
     </div>
+    <script src="js/main.js"></script>
   </body>
 </html>
