@@ -91,13 +91,18 @@
   /* 
 뉴스 글자 지우기
 */
+
+.news-wrap{
+  padding: 50px 0 ;
+ }
+
   .news-scr > a > p {
     display: none;
   }
 
   /* 마진 줄이기 */
   .news-box {
-    padding: 50px;
+    padding: 50px 70px ;
   }
   .notice {
     margin-top: 20px;
@@ -116,3 +121,9 @@
     height: 55px;
   }
 }
+@media screen and (max-width: 390px) {
+.news-wrap{
+  padding: 50px 0 ;
+ }
+}
+

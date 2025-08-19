@@ -7,3 +7,78 @@
   .banner img{
     width: 100%;
   }
+
+
+/* html에 스와이퍼 이름 주의 */
+/* 비주얼 스와이퍼 */
+.visualSwiper{
+    /* 텍스트를 비주얼 위에 올리기 위함 
+    먼저 크기를똭채워야 함
+    */
+    position: relative;
+    width: 100%;
+}
+.visualSwiper .swiper-slide{
+/* 엄청 많아져서 어디 안의 스와이퍼슬라이드 보이게 */
+width: 100%;
+
+}
+.visualSwiper .swiper-slide img{
+/* 엄청 많아져서 어디 안의 스와이퍼슬라이드 보이게 */
+width: 100%;
+}
+.visual-sw-txt{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0,0,0,0.2);
+    color: #fff;
+    padding: 30px;
+    font-size: 2rem;
+    /* html16 >여기32px */
+}
+/* 클램프 뭐더라... */
+.mo-img{
+    display: none;
+}
+/* 상품 스와이퍼 */
+/* 아이템스와이퍼 내가 부여한 이름 건들기 */
+.itemSwiper{
+position: relative;
+/* 얼마의 공간을 할건지 결정하기 */
+width: 90%;
+max-width: 1200px;
+}
+.itemSwiper .swiper-slide img{
+    width: 100%;
+    /* 여기서 속성 놉 */
+}
+
+
+/* 반응형 !! */
+/* html{
+    font-size: 16px;
+}의반응형으로 */
+@media(max-width:768px){
+html{
+    font-size: 8px;
+}
+.mo-img{
+    display: block;
+}
+/* 이렇게 하면 rem이 알어서 조정
+2rem>16px
+*/
+}
+@media(max-width:390px){
+html{
+    font-size: 6px;
+    
+}
+.web-img{
+    display: block;
+}
+
+
+}
