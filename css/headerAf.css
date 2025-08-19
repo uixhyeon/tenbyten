@@ -1,4 +1,4 @@
-/* 수정중 */
+/*  헤더.. 700px까지 문제없음 */
 .wrap {
   width: 100%;
   position: relative;
@@ -8,10 +8,11 @@
   position: relative;
 }
 .header-inner {
-  width: 100%;
+  width:   80%;
   display: flex;
   flex-direction: column;
   position: relative;
+  margin: auto;
 }
 .header-top {
   width: 100%;
@@ -26,7 +27,7 @@
   position: relative;
   display: flex;
   justify-content: flex-end;
-  gap: 10px;
+  gap: 2%;
 }
 /* Q F12 element에서 flex 창을 눌렀는데
 변경버튼이 뜨지 않는 이유.A 클래스명이 뭔가
@@ -36,8 +37,7 @@
 /* 계쩡 주눈 방바구니가 안움직인다.
 어디를 고쳐야할까 A여유공간이 없어서 */
 .navi-1 ul li {
-  width: 10%;
-  min-width: 80px;
+  width: 80px;
   text-align: center;
 }
 .header-center {
@@ -50,6 +50,7 @@
   픽셀이 나을지 */
 }
 .main-logo {
+
   width: 30%;
 }
 .main-logo > a {

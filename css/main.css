@@ -93,7 +93,7 @@ ul,
 li {
   list-style: none;
 }
-a {
+a,p {
   text-decoration: none;
   color: #333;
   font: "Orbitron", sans-serif;
@@ -105,8 +105,11 @@ body {
   /* 있다 폰트적용하며 바꾸기 완.*/
 }
 html {
-  font-size: 16px;
+  font-size: 14px;
   font-weight: 500;
+}
+img{
+  display: block;
 }
 .wrap {
   position: relative;

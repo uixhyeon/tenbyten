@@ -1,0 +1,66 @@
+.footer{
+    margin: auto;
+width: 100%;
+position: relative;
+}
+.footer-inner{
+    margin: auto;
+    width: 80%;
+    position: relative;
+}
+.footer-top{
+    width: 100%;
+}
+.ft-navi > ul{
+width: 100%;
+display: flex;
+text-align: center;
+justify-content: space-evenly;
+}
+.ft-navi > ul >li> a{
+    display: block;
+text-align: center;
+padding: 10px;
+}
+.footer-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+}
+.ft-left{
+    width: 20%;
+}
+.ft-left>a{
+    display:inline-block ;
+    justify-content: center;
+}
+.ft-center{
+    width: 40%;
+}
+.ft-center>p>a{
+    font-size: 0.8rem;
+    text-align: center;
+    color: rgb(138, 138, 138);
+}
+.ft-right{
+    width: 30%;
+}
+.ft-r-top{
+    width: 100%;
+    padding: 20px ;
+}
+.ft-r-top > a >img{
+    width: 50px;
+   margin-right: 10px;
+}
+.ft-r-bottom{
+    background-color: #f7f7f7;
+    padding: 20px;
+    border-radius: 20px;
+}
+.ft-r-bottom >a >p >span{
+    font-size: 1rem;
+     color: rgb(138, 138, 138);
+     text-decoration: none ;
+}

@@ -1,54 +1,57 @@
-.inner/* 수정 목표
+/* 수정 목표
 card res 같이 줄이면 줄어들게 해보자.
 */
 
 .inner {
   width: 80%;
+  /* min-width: 1300px; */
   margin: auto;
   position: relative;
 }
 /* first-section */
 .card1-inner {
-  width: 100%;
+  width: 80%;
   margin: auto;
   position: relative;
   display: flex;
   background: url(../images/bg_pattern_slash.png) 0 0 repeat;
 }
 .card1-left {
-  width: 280px;
+  width: 15%;
   text-align: center;
   margin-top: 60px;
 }
 .card1-right {
-  width: calc(100% - 280px);
+  width: calc(100% - 15%);
+  padding: 20px;
 }
-  
-  .card > li > a {
-    text-align: center;
-    font-size: 1.5rem;
-    font-weight: 600;
-  }
-  .card > li > a > img{
-    width: 100%;
-    /* 이게 크기를 작아지게 하는것 
-    기억하기 */
-  }
 
-  .first-card {
-   display: flex;
-   justify-content: center;
+.card > li > a {
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.card > li > a > img {
+  width: 100%;
+  /* 이게 크기를 작아지게 하는것 
+    기억하기 */
+}
+
+.first-card {
+  display: flex;
+  justify-content: center;
   width: 90%;
   max-width: 800px;
-  min-width: 200px;
+  /* min-width: 200px; */
+  /* @@@@@@@@@@@@@@@@ 무슨 역할인지 */
   /* 이 민이랑 맥스 아직
   어떤역할을 하는지 모르겠다 */
   gap: 2%;
   margin: auto;
   flex-wrap: nowrap;
 }
-.first-card > li{
-width: calc((100%-4%)/3);
+.first-card > li {
+  width: calc((100% - 4%) / 3);
 }
 .first-card > li > a > img {
   /* display: block; */
@@ -57,27 +60,28 @@ width: calc((100%-4%)/3);
 }
 /* second-section */
 .card2-left {
-  width: 280px;
+  width: 20%;
   text-align: left;
   margin-top: 60px;
   padding: 0 30px;
 }
 .card2-right {
-  width: calc(100% - 280px);
+  width: calc(100% - 20%);
+  padding: 20px;
 }
-.card2-inner{
-    width: 100%;
+.card2-inner {
+  width: 80%;
   margin: auto;
   position: relative;
   display: flex;
 }
-.second-card{
+.second-card {
   display: flex;
   width: 100%;
-   max-width: 1500px;
-  min-width: 200px;
+  max-width: 1500px;
+  /* min-width: 200px; */
   gap: 2%;
-    margin: auto;
+  margin: auto;
   flex-wrap: wrap;
 }
 .second-card > li {
@@ -88,34 +92,37 @@ width: calc((100%-4%)/3);
 }
 /* third-section */
 .card3-inner {
-  padding: 20px;
+  margin: auto;
+  width: 80%;
+  /* padding: 20px; */
 }
 .card3-top {
+  width: 100%;
   text-align: center;
   padding: 50px;
 }
-.card3-bottom{
+.card3-bottom {
   width: 100%;
   position: relative;
+  padding: 20px;
 }
-.third-card{
-   width: 100%;
+.third-card {
+  width: 100%;
   position: relative;
-   display: flex;
-  max-width: 1700px;
-  min-width: 600px;
+  display: flex;
   gap: 2%;
   margin: auto;
   flex-wrap: wrap;
   /* 몬가 어색하다 */
 }
-/* 튕겨내려가야하는데 그게없고 깨진다.. */
-.third-card > li{
-    width: calc((100% - 2%) / 2);
+
+.third-card > li {
+  width: calc((100% - 2%) / 2);
 }
+/* @@@@@@@@@@@@@@ */
 .box {
-  width: 800px;
-  height: 500px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   position: relative;
   overflow: hidden;
 }
@@ -129,49 +136,64 @@ width: calc((100%-4%)/3);
 }
 
 /* fourth-section */
-.card4{
+.card4 {
   width: 100%;
 }
 .card4-inner {
-  width: 100%;
+  margin: auto;
+  width: 80%;
   display: flex;
-  padding: 20px;
 }
 .card4-left {
-  width: 280px;
+  width: 20%;
   text-align: left;
   margin-top: 60px;
 }
+
 .card4-right {
-  width: calc(100% - 280px);
+  width: calc(100% - 20%);
+  padding: 20px;
 }
-.box2 {
-  padding: 10px;
-  /* 패딩은 퍼센트가 안되나 */
+
+.fourth-card {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2px;
+}
+.fourth-card > li {
+  flex: 1 1 calc(25% - 2px);
+}
+.fourth-card > li > a > img {
+  width: 100%;
+}
+
+/* @@@@카드 나열  내려가면 그...나누어지는
+responsive > 
+에서 card_flex으로 카드 수정 
+re>willbe 0811이 더 적절
+*/
+/* @@@@이거해야함. */
+@media screen and (max-width: 768px) {
+.first-card > li {
+  width: calc((100% - 4%) / 3);
+}
+.second-card > li {
+  width: calc((100% - 4%) / 3);
+}
+.third-card > li {
+  width: calc((100%) / 1);
 }
 .fourth-card {
   width: 100%;
   display: flex;
-gap: 20px;
+  flex-wrap: wrap;
   justify-content: center;
+  gap: 2px;
 }
 
 
-
-
-
-
-
-/* last.. */
-@media screen and (max-width: 768px) {
-  .flexBox li {
-    width: calc((100% - 4%) / 3);
-  }
-}
-@media screen and (max-width: 480px) {
-  .flexBox li {
-    width: calc((100% - 2%) / 2);
-  }
 }
 @media screen and (max-width: 390px) {
   .flexBox li {
