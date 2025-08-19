@@ -138,3 +138,43 @@
   text-align: center;
   display: block;
 }
+
+
+
+@media screen and (max-width: 630px){
+.header-center{
+  flex-direction: column;
+}
+.main-logo{
+  width: 100%;
+  align-items: center;
+ 
+}
+.main-logo > a{
+width: 100%;
+align-items: center;
+}
+.main-logo > a > h1 {
+  width: 100%;
+  font-size: 60px;
+  /* 
+  
+  @@@@@@@@@@@중간에 오게
+  */
+    align-items: center;
+}
+  .search-bar {
+width: 80%;
+  max-width: 80%;
+  min-width: 20%;
+  height: 50px;
+
+  }
+
+.navi-2 > ul > li{
+  line-height: 30px;
+  
+}
+
+
+}

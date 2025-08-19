@@ -30,7 +30,7 @@ width: 20%;
 
 .card > li > a {
   text-align: center;
-  font-size:clamp(1rem,2vw,2rem);
+  font-size: clamp(0.8rem, 2vw, 2.5rem);
   /* 
   @@@@@@@@@@@@@@@@@
   clamp을 어떻게..
@@ -261,6 +261,12 @@ notice
   .inner {
     width: 90%;
   }
+
+  /* card1dkakk,,, */
+.card1-left > span{
+ font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
 }
 @media screen and (max-width: 390px) {
   .flexBox li {

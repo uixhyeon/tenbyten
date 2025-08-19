@@ -87,3 +87,32 @@
     width: 100%;
   }
 }
+@media screen and (max-width: 600px) {
+  /* 
+뉴스 글자 지우기
+*/
+  .news-scr > a > p {
+    display: none;
+  }
+
+  /* 마진 줄이기 */
+  .news-box {
+    padding: 50px;
+  }
+  .notice {
+    margin-top: 20px;
+    height: 55px;
+  }
+  .store {
+    margin-top: 20px;
+    height: 55px;
+  }
+  .news-center {
+    margin-top: 20px;
+    height: 55px;
+  }
+  .news-right {
+    margin-top: 20px;
+    height: 55px;
+  }
+}
