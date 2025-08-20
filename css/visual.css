@@ -23,6 +23,17 @@
 width: 100%;
 
 }
+
+/* 비주얼 스와이퍼 좌우 화살표 연하게 */
+.visualSwiper .swiper-button-next,
+.visualSwiper .swiper-button-prev {
+  color: #fff;       /* 버튼 색상 (흰색) */
+  opacity: 0.3;      /* 투명도 낮추기: 0=투명, 1=불투명 */
+  transition: opacity 0.5s ease;
+}
+
+
+
 .visualSwiper .swiper-slide img{
 /* 엄청 많아져서 어디 안의 스와이퍼슬라이드 보이게 */
 width: 100%;
@@ -64,21 +75,41 @@ max-width: 1200px;
 html{
     font-size: 8px;
 }
-.mo-img{
+.web-img{
     display: block;
+}
+.mo-img{
+    display: none;
 }
 /* 이렇게 하면 rem이 알어서 조정
 2rem>16px
 */
 }
+
+
+
+@media(max-width:600px){
+html{
+    font-size: 6px;
+    
+}
+.web-img{
+    display: none;
+}
+.mo-img{
+    display: block;
+}
+}
+
 @media(max-width:390px){
 html{
     font-size: 6px;
     
 }
 .web-img{
+    display: none;
+}
+.mo-img{
     display: block;
 }
-
-
 }

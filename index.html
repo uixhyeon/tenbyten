@@ -51,6 +51,11 @@
       href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&family=Black+Han+Sans&family=Bungee+Inline&family=Bungee+Shade&family=Nosifer&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Orbitron:wght@400..900&family=Titan+One&display=swap"
       rel="stylesheet"
     />
+    <!-- Swiper CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
     <!-- Swiper JS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   </head>
@@ -91,25 +96,27 @@
           </div>
           <!-- 헤더-바텀 -->
           <div class="header-bottom">
-        <!-- 햄버거 버튼 -->
-<button class="hamburger" id="hamburger">
-  <span></span>
-  <span></span>
-  <span></span>
-</button>
-
-<!-- 네비게이션 메뉴 -->
-<nav class="nav" id="nav">
-  <ul>
-    <li><a href="#">홈</a></li>
-    <li><a href="#">서비스</a></li>
-    <li><a href="#">소개</a></li>
-    <li><a href="#">문의</a></li>
-  </ul>
-</nav>
+            <!-- 햄버거 버튼 -->
+        
 
             <nav class="navi navi-2">
               <ul>
+                <li>
+    <button class="menu-btn" id="hamburger">
+            <a href="#"><i class="fa-solid fa-bars"></i></a>
+            </button>
+
+            <!-- 네비게이션 메뉴 -->
+            <nav class="menu" id="nav">
+              <ul class="accordion" >
+                <li><a href="#" class="open">홈</a></li>
+                <li><a href="#" class="open">서비스</a></li>
+                <li><a href="#" class="open">소개</a></li>
+                <li><a href="#" class="open">문의</a></li>
+              </ul>
+            </nav>
+
+                </li>
                 <li>
                   <a href="#">텐텐다꾸존</a>
                 </li>
@@ -138,37 +145,79 @@
       </header>
       <!-- @비쥬얼-베너 -->
 
+      <!-- 비주얼베너스와이퍼 --><!-- 비주얼베너 스와이퍼 (수정본) -->
+      <div class="swiper visualSwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <img
+              src="images/bg1-1.jpg"
+              alt="베너1"
+              class="web-img"
+            />
+            <img
+              src="images/bg1-2.png"
+              alt="모바일 베너1"
+              class="mo-img"
+            />
+          </div>
 
- <!-- 비주얼베너스와이퍼 -->
-    <div class="swiper visualSwiper">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <!-- 내용은 자유롭게 구성 그러나 클래스명은 *같게*-->
-          <img src="images/imgi_134_mainRolling_99228_20250807155239.jpg" alt="이미지1" class="web-img" />
-          <img src="images/about-03-1.png" alt="모바일 이미지" class="mo-img">
-        
+          <div class="swiper-slide">
+            <img
+              src="images/bg2-1.jpg"
+              alt="베너2"
+              class="web-img"
+            />
+            <img
+              src="images/bg2-2.png"
+              alt="모바일 베너2"
+              class="mo-img"
+            />
+          </div>
+
+          <div class="swiper-slide">
+            <img
+              src="images/bg3-1.jpg"
+              alt="베너3"
+              class="web-img"
+            />
+            <img
+              src="images/bg3-2.png"
+              alt="모바일 베너3"
+              class="mo-img"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="images/bg4-1.jpg"
+              alt="베너4"
+              class="web-img"
+            />
+            <img
+              src="images/bg4-2.png"
+              alt="모바일 베너4"
+              class="mo-img"
+            />
+          </div>
+          <div class="swiper-slide">
+            <img
+              src="images/bg5-1.jpg"
+              alt="베너5"
+              class="web-img"
+            />
+            <img
+              src="images/bg5-2.png"
+              alt="모바일 베너5"
+              class="mo-img"
+            />
+          </div>
         </div>
-        <div class="swiper-slide">
-          <img src="images/imgi_135_mainRolling_99229_20250807155312.jpg" alt="이미지1" class="web-img" />
-                    <img src="images/about-03-1.png" alt="모바일 이미지" class="mo-img">
-          
-        </div>
-        <div class="swiper-slide">
-          <img src="images/imgi_136_mainRolling_99230_20250807155343.jpg" alt="이미지1" class="web-img" />
-                    <img src="images/about-03-1.png" alt="모바일 이미지" class="mo-img">
-         
 
-
-
-
-
-
-
-
-
-
-
-
+        <!-- (선택) 페이징/네비 -->
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      <!-- 🔚 .visualSwiper 끝 -->
 
       <!-- @메인 -->
 
@@ -423,8 +472,8 @@
               <li>
                 <a href="#">
                   <img
-                    src="images/imgi_54_bannerImg20241219153902.jpg"
-                    alt="스누피 조명"
+                    src="images/imgi_36_B003511660.jpg"
+                    alt="커피컵"
                   />
                 </a>
               </li>
@@ -433,46 +482,46 @@
               -->
               <li>
                 <a href="#">
-                  <img src="imgi_44_" alt="접시" />
+                  <img src="images/imgi_38_B006818455.jpg" alt="마스킹테이프" />
                 </a>
               </li>
               <li>
                 <a href="#">
                   <img
-                    src="images/imgi_5_Frontimage20250807180258.jpg"
-                    alt=""
+                    src="images/imgi_48_B006341907-1.jpg"
+                    alt="극세사 인형"
                   />
                 </a>
               </li>
               <li>
                 <a href="#">
                   <img
-                    src="images/imgi_5_Frontimage20250807180258.jpg"
-                    alt=""
+                    src="images/imgi_64_B002068094.jpg"
+                    alt="토토로 인형"
                   />
                 </a>
               </li>
               <li>
                 <a href="#">
                   <img
-                    src="images/imgi_5_Frontimage20250807180258.jpg"
-                    alt=""
+                    src="images/imgi_117_B000186055.jpg"
+                    alt="펌킨인형 만들기"
                   />
                 </a>
               </li>
               <li>
                 <a href="#">
                   <img
-                    src="images/imgi_5_Frontimage20250807180258.jpg"
-                    alt=""
+                    src="images/imgi_105_B003019218-6.jpg"
+                    alt="스누피 테이블"
                   />
                 </a>
               </li>
               <li>
                 <a href="#">
                   <img
-                    src="images/imgi_5_Frontimage20250807180258.jpg"
-                    alt=""
+                    src="images/imgi_95_B005950827-1.jpg"
+                    alt="행운 스티커"
                   />
                 </a>
               </li>

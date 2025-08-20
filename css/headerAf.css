@@ -99,30 +99,58 @@
 .header-bottom {
   width: 100%;
   position: relative;
-  display: flex;
+  /* display: flex; */
+
 }
 /* 햄버거 버튼 기본 */
-.hamburger {
-  display: none; /* PC에서는 안보이게 */
-  flex-direction: column;
-  justify-content: space-between;
-  width: 20px;
-  height: 20px;
-  background: none;
-  border: none;
-  cursor: pointer;
+.menu-btn{
   position: relative;
+  border: none;
+  background-color: #fff;
 }
 
-.hamburger span {
-  display: block;
-  height: 4px;
-  background: #333;
-  border-radius: 2px;
-  position: absolute;
-  height: 3px;
-  width: 10px;
+.fa-bars{
+  position: relative;
+font-size: 25px;
 }
+
+/* @@@@@@@@@@@@@@@@@메뉴에 대한 붙여넣기 */
+/* 모바일 메뉴 토글 */
+.menu {
+  display: none;
+position: absolute;
+top: 25px;
+left: 0;
+z-index: 999;
+width: 30%;
+height: 50vh;
+background-color: rgba(0, 0, 0, 0.6);
+border-radius: 10px;
+}
+.open{
+  color: #fff;
+}
+.menu.open {
+  display: block;
+}
+/* open에 해당하는 css가 있어야 한다 */
+
+/* 클릭메뉴 */
+.click-nav {
+  padding: 50px 0;
+  background-color: antiquewhite;
+}
+.click-menu {
+  display: none;
+}
+.click-menu.toggleOpen {
+  display: flex;
+}
+/* 붙여넣기 끝 */
+
+
+
+
 
 /* 아직 인라인 블락과 블락이 헷갈린다 
   어디서 뭐를 적용해야 할지
@@ -250,6 +278,9 @@
       right: 20px;
       padding: 10px;
     }
+     
+.main-logo > a {
+  padding: 0 50px;}
     .nav.active {
       display: flex; /* 햄버거 클릭 시 보임 */
     }

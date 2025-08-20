@@ -1,3 +1,4 @@
+// 이것은.. 비주얼 스와이프에 대한 코드
 window.addEventListener("load", function () {
   const visualSwiper = new Swiper(".visualSwiper", {
     autoplay: {
@@ -34,7 +35,21 @@ window.addEventListener("load", function () {
       1200: {
         slidesPerView: 5.5,
       },
-      // 컴마 주의하기
     },
+  });
+});
+// 컴마 주의하기
+// 비주얼 스와이퍼 끝
+// 여기부터는 토글에 대한 js
+window.addEventListener("load", function () {
+  // 모바일 메뉴 토글
+  const menuBtn = this.document.querySelector(".menu-btn");
+  const menu = this.document.querySelector(".menu");
+  menuBtn.addEventListener("click", function () {
+    if (menu.classList.contains("open")) {
+      menu.classList.remove("open");
+    } else {
+      menu.classList.add("open");
+    }
   });
 });
