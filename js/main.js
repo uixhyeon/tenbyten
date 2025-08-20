@@ -53,3 +53,40 @@ window.addEventListener("load", function () {
     }
   });
 });
+
+
+// @@@@@@@@@@@@@@@@@@@@@
+// 아코디언..
+window.addEventListener("load", function () {
+  //    console.log
+  // 무엇을 담을지 생각하기
+  const menus = this.document.querySelectorAll(".menu");
+  const submenus = this.document.querySelectorAll(".submenu");
+
+  menus.forEach(function (menu, index) {
+    // console.log(menu, index);
+    // 확인완료
+    menu.addEventListener("click", function () {
+      // console.log("메뉴클릭")
+      // 확인완료
+      // 뭘 눌렀는지 모르기때문에 서브터런트 서브메뉴에 인덱스를 담겠다.
+      const subcurrent = submenus[index];
+      // console.log(subcurrent)
+      // 이게 가능하려면 html 구조가 바뀌지 않고 지금과 같아야
+      // 확인완
+      // 이미 열러있으면 닫기를 한다.
+      if (subcurrent.classList.contains("active")) {
+        subcurrent.classList.remove("active");
+      } else {
+        // 열려있는 메뉴는 닫기
+        submenus.forEach(function (sub) {
+        //   console.log(sub);
+        //확인
+        sub.classList.remove("active")
+        });
+        //액티브가 없으면 열기
+        subcurrent.classList.add("active");
+      }
+    });
+  });
+});

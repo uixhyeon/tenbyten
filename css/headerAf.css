@@ -122,8 +122,8 @@ position: absolute;
 top: 25px;
 left: 0;
 z-index: 999;
-width: 30%;
-height: 50vh;
+/* width: 30%; */
+/* height: 50vh; */
 background-color: rgba(0, 0, 0, 0.6);
 border-radius: 10px;
 }
@@ -148,8 +148,18 @@ border-radius: 10px;
 }
 /* 붙여넣기 끝 */
 
+/* 아코디언 넣음 */
+.submenu{
+    display: none;
+    padding: 10px 20px;
+}
+.submenu.active{
+    display: block;
+}
+.submenu > li{
+  padding: 10px 20px;
 
-
+}
 
 
 /* 아직 인라인 블락과 블락이 헷갈린다 
