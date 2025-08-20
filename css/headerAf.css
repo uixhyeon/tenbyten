@@ -8,13 +8,37 @@
   position: relative;
 }
 .header-inner {
-  width: 80%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   position: relative;
   margin: auto;
 }
+/*  
+@@@@@@@@@@@@
+헤더 이너를 제거하고 다시 넣어야함
+해야할것
 
+
+고정 요소의 컨테이닝 문제
+.header-top이 position: fixed인데,
+ 이 상태에선 부모의 width:80% ( .header-inner )를
+  따라가지 않습니다. 뷰포트 기준으로 
+  붙으면서 좌우 기준점(left:0; right:0; top:0)을 
+  안 준 탓에 위치가 애매해지고, 
+  안쪽 콘텐츠 배치도 어긋나 보여요.
+
+고정바 높이만큼 상단 여백 미지정
+고정된 60px만큼 본문을 내려주지 않아서,
+ 바로 아래 요소들이 겹쳐 보입니다.
+
+셀렉터/이름 불일치 + media 중첩
+HTML은 .menu-btn, #nav인데 
+미디어쿼리엔 .hamburger, .nav가 나와서 
+모바일에서 의도와 다르게 동작합니다.
+ 또한 @media 안에 또 @media를 넣어 괄호/범위가 
+ 꼬일 위험이 있어요(일반 CSS에선 권장 X).
+*/
 .header-top {
   width: 100%;
   position: fixed;
@@ -103,11 +127,10 @@
   width: 100%;
   position: relative;
   /* display: flex; */
-
 }
 /* 햄버거 버튼: 흰 바탕, 아이콘 #333 */
 .menu-btn {
-  position:relative;
+  position: relative;
   top: 16px;
   left: 16px;
   z-index: 1001;
@@ -120,22 +143,23 @@
   font-size: 18px;
   line-height: 1;
 }
-.menu-btn:focus { outline: 2px solid #333; }
-
+.menu-btn:focus {
+  outline: 2px solid #333;
+}
 
 /* 메뉴 컨테이너: 버튼 아래에 시작 (겹침 방지) */
 #menu {
-  display: none;             /* JS 토글 */
+  display: none; /* JS 토글 */
   position: fixed;
-  top: 60px;                 /* 버튼 높이만큼 띄우기 */
+  top: 60px; /* 버튼 높이만큼 띄우기 */
   left: 0;
   width: 280px;
   height: calc(100vh - 60px);
-  background: #fff;          /* 흰 */
-  color: #333;               /* 글자 #333 */
+  background: #fff; /* 흰 */
+  color: #333; /* 글자 #333 */
   z-index: 1000;
   padding: 20px 16px;
-  box-shadow: 2px 0 12px rgba(0,0,0,0.15);
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
   overflow-y: auto;
 }
 /* nav#nav는 항상 보이게 */
@@ -148,12 +172,18 @@
   padding: 0;
   box-shadow: none;
 }
-#nav > ul{
+#nav > ul {
   display: flex;
 }
 /* 리스트 기본 */
-.menu ul { list-style: none; margin: 0; padding: 0; }
-.menu li { margin: 0 0 10px 0; }
+.menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.menu li {
+  margin: 0 0 10px 0;
+}
 
 /* 상위 메뉴 링크: 흰 바탕, 글자 #333, hover 시 밑줄만 */
 .menu a[data-toggle="dropdown"] {
@@ -167,9 +197,9 @@
   position: relative;
 }
 .menu a[data-toggle="dropdown"]:hover {
-  color: #333;                 /* 색 변화 없음 */
-  background: #fff;            /* 배경 변화 없음 */
-  text-decoration: underline;  /* 밑줄만 */
+  color: #333; /* 색 변화 없음 */
+  background: #fff; /* 배경 변화 없음 */
+  text-decoration: underline; /* 밑줄만 */
 }
 
 /* 화살표: 고정(회전/애니메이션 없음) */
@@ -182,19 +212,25 @@
   font-style: normal;
   font-size: 12px;
 }
-.icon-arrow::before { content: "▼"; }
+.icon-arrow::before {
+  content: "▼";
+}
 
 /* 서브메뉴: 슬라이드 높이 전환만 */
 .dropdown-menu {
   max-height: 0;
   overflow: hidden;
-  transition: max-height .35s ease;  /* 슬라이드 효과 */
+  transition: max-height 0.35s ease; /* 슬라이드 효과 */
   padding-left: 0;
   margin-top: 6px;
-  border-left: 2px solid #ff0000;    /* 구분용 빨강 라인(선택) */
+  border-left: 2px solid #ff0000; /* 구분용 빨강 라인(선택) */
 }
-.dropdown-menu.show { max-height: 500px; } /* 충분히 큰 값 */
-.dropdown-menu.hide { max-height: 0; }
+.dropdown-menu.show {
+  max-height: 500px;
+} /* 충분히 큰 값 */
+.dropdown-menu.hide {
+  max-height: 0;
+}
 
 /* 서브메뉴 항목: 흰/#333, hover 시 밑줄만 */
 .dropdown-menu li a {
@@ -206,72 +242,20 @@
   border-radius: 4px;
 }
 .dropdown-menu li a:hover {
-  background: #fff;            /* 변화 없음 */
-  color: #333;                 /* 변화 없음 */
-  text-decoration: underline;  /* 밑줄만 */
+  background: #fff; /* 변화 없음 */
+  color: #333; /* 변화 없음 */
+  text-decoration: underline; /* 밑줄만 */
 }
 
 /* 링크 전체 보호(우발적인 상위 스타일 덮임 방지) */
-.menu a:hover { color: #333; }
+.menu a:hover {
+  color: #333;
+}
 /* 아직 인라인 블락과 블락이 헷갈린다 
   어디서 뭐를 적용해야 할지
   개념이 부족..*/
 
-/*@@@@@@@@ 
-  일단 넘어가고 이후에 다시 */
-/* 전체 폭 사용 */
-/* 가로 스크롤 활성화 */
-/* 모바일에서 부드러운 스크롤 */
-/* 줄바꿈 방지 */
-/* 파이어폭스 스크롤바 숨김 */
 
-/* .navi-2 {
-  width: 100%;             
-  overflow-x: auto;    
-  -webkit-overflow-scrolling: touch; 
-  white-space: nowrap;      
-  scrollbar-width: none;   
-} */
-
-/* 크롬/사파리 스크롤바 숨김 */
-/* 
-.navi-2::-webkit-scrollbar { 
-  display: none;        }    
-   */
-/* 가로로 나열 */
-/* 메뉴 간격 */
-/* 
-.navi-2 ul {
-  display: inline-flex;    
-  gap: 12px;                
-  padding: 10px 16px;
-  margin: 0;
-  list-style: none;
-} */
-
-/* 줄바꿈 방지 */
-/*  
-.navi-2 li {
-  flex: 0 0 auto;          
-} */
-/* 
-.navi-2 a {
-  display: block;
-  padding: 8px 16px;
-  font-size: 14px;
-  font-weight: 600;
-  color: #333;
-  background: #f8f8f8;
-  border-radius: 20px;
-  text-decoration: none;
-  transition: all 0.3s;
-} */
-/* 
-.navi-2 a:hover {
-  background: #f0f0f0;
-} */
-
-/* 여기까지 */
 
 .navi-2 {
   width: 100%;
@@ -339,9 +323,10 @@
       right: 20px;
       padding: 10px;
     }
-     
-.main-logo > a {
-  padding: 0 50px;}
+
+    .main-logo > a {
+      padding: 0 50px;
+    }
     .nav.active {
       display: flex; /* 햄버거 클릭 시 보임 */
     }
