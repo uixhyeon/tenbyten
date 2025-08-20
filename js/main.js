@@ -54,7 +54,6 @@ window.addEventListener("load", function () {
   });
 });
 
-
 // @@@@@@@@@@@@@@@@@@@@@
 // 아코디언..
 window.addEventListener("load", function () {
@@ -80,13 +79,46 @@ window.addEventListener("load", function () {
       } else {
         // 열려있는 메뉴는 닫기
         submenus.forEach(function (sub) {
-        //   console.log(sub);
-        //확인
-        sub.classList.remove("active")
+          //   console.log(sub);
+          //확인
+          sub.classList.remove("active");
         });
         //액티브가 없으면 열기
         subcurrent.classList.add("active");
       }
     });
+  });
+});
+
+//@@@@@@
+//토글// 햄버거: 메뉴 열기/닫기 (display 토글)
+const menuBtn = document.getElementById("hamburger");
+const menuBox = document.getElementById("menu");
+
+menuBtn.addEventListener("click", function () {
+  const showing = menuBox.style.display === "block";
+  menuBox.style.display = showing ? "none" : "block";
+  menuBtn.setAttribute("aria-expanded", (!showing).toString());
+});
+
+// 드롭다운(상위 항목 클릭 시 서브메뉴 슬라이드)
+var dropdowns = document.querySelectorAll(".dropdown");
+
+dropdowns.forEach(function (el) {
+  var button = el.querySelector('a[data-toggle="dropdown"]');
+  var submenu = el.querySelector(".dropdown-menu");
+  var arrow = el.querySelector(".icon-arrow"); // 화살표는 고정, 회전 X
+
+  // 버튼 클릭 시 슬라이드 토글 (화살표 클래스 조작 제거)
+  button.addEventListener("click", function (e) {
+    e.preventDefault();
+    var isOpen = submenu.classList.contains("show");
+    if (isOpen) {
+      submenu.classList.remove("show");
+      submenu.classList.add("hide");
+    } else {
+      submenu.classList.add("show");
+      submenu.classList.remove("hide");
+    }
   });
 });

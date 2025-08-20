@@ -14,9 +14,13 @@
   position: relative;
   margin: auto;
 }
+
 .header-top {
   width: 100%;
-  position: relative;
+  position: fixed;
+  background: #fff;
+  z-index: 9999;
+  height: 60px;
 }
 .navi-1 {
   width: 100%;
@@ -87,7 +91,6 @@
   border: solid #ff3c3c 5px;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
   /* flex-direction: row; */
-  display: flex;
   justify-content: space-between;
   align-items: center;
 }
@@ -102,66 +105,114 @@
   /* display: flex; */
 
 }
-/* 햄버거 버튼 기본 */
-.menu-btn{
-  position: relative;
+/* 햄버거 버튼: 흰 바탕, 아이콘 #333 */
+.menu-btn {
+  position:relative;
+  top: 16px;
+  left: 16px;
+  z-index: 1001;
   border: none;
-  background-color: #fff;
+  background: #fff;
+  color: #333;
+  padding: 10px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 18px;
+  line-height: 1;
 }
+.menu-btn:focus { outline: 2px solid #333; }
 
-.fa-bars{
-  position: relative;
-font-size: 25px;
-}
 
-/* @@@@@@@@@@@@@@@@@메뉴에 대한 붙여넣기 */
-/* 모바일 메뉴 토글 */
-.menu {
-  display: none;
-position: absolute;
-top: 25px;
-left: 0;
-z-index: 999;
-/* width: 30%; */
-/* height: 50vh; */
-background-color: rgba(0, 0, 0, 0.6);
-border-radius: 10px;
+/* 메뉴 컨테이너: 버튼 아래에 시작 (겹침 방지) */
+#menu {
+  display: none;             /* JS 토글 */
+  position: fixed;
+  top: 60px;                 /* 버튼 높이만큼 띄우기 */
+  left: 0;
+  width: 280px;
+  height: calc(100vh - 60px);
+  background: #fff;          /* 흰 */
+  color: #333;               /* 글자 #333 */
+  z-index: 1000;
+  padding: 20px 16px;
+  box-shadow: 2px 0 12px rgba(0,0,0,0.15);
+  overflow-y: auto;
 }
-.open{
-  color: #fff;
-}
-.menu.open {
+/* nav#nav는 항상 보이게 */
+#nav {
   display: block;
+  position: static;
+  background: transparent;
+  width: auto;
+  height: auto;
+  padding: 0;
+  box-shadow: none;
 }
-/* open에 해당하는 css가 있어야 한다 */
-
-/* 클릭메뉴 */
-.click-nav {
-  padding: 50px 0;
-  background-color: antiquewhite;
-}
-.click-menu {
-  display: none;
-}
-.click-menu.toggleOpen {
+#nav > ul{
   display: flex;
 }
-/* 붙여넣기 끝 */
+/* 리스트 기본 */
+.menu ul { list-style: none; margin: 0; padding: 0; }
+.menu li { margin: 0 0 10px 0; }
 
-/* 아코디언 넣음 */
-.submenu{
-    display: none;
-    padding: 10px 20px;
+/* 상위 메뉴 링크: 흰 바탕, 글자 #333, hover 시 밑줄만 */
+.menu a[data-toggle="dropdown"] {
+  display: block;
+  background: #fff;
+  color: #333;
+  text-decoration: none;
+  padding: 10px 12px;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  position: relative;
 }
-.submenu.active{
-    display: block;
-}
-.submenu > li{
-  padding: 10px 20px;
-
+.menu a[data-toggle="dropdown"]:hover {
+  color: #333;                 /* 색 변화 없음 */
+  background: #fff;            /* 배경 변화 없음 */
+  text-decoration: underline;  /* 밑줄만 */
 }
 
+/* 화살표: 고정(회전/애니메이션 없음) */
+.icon-arrow {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%); /* 회전 제거 */
+  color: #333;
+  font-style: normal;
+  font-size: 12px;
+}
+.icon-arrow::before { content: "▼"; }
 
+/* 서브메뉴: 슬라이드 높이 전환만 */
+.dropdown-menu {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height .35s ease;  /* 슬라이드 효과 */
+  padding-left: 0;
+  margin-top: 6px;
+  border-left: 2px solid #ff0000;    /* 구분용 빨강 라인(선택) */
+}
+.dropdown-menu.show { max-height: 500px; } /* 충분히 큰 값 */
+.dropdown-menu.hide { max-height: 0; }
+
+/* 서브메뉴 항목: 흰/#333, hover 시 밑줄만 */
+.dropdown-menu li a {
+  display: block;
+  padding: 8px 10px;
+  background: #fff;
+  color: #333;
+  text-decoration: none;
+  border-radius: 4px;
+}
+.dropdown-menu li a:hover {
+  background: #fff;            /* 변화 없음 */
+  color: #333;                 /* 변화 없음 */
+  text-decoration: underline;  /* 밑줄만 */
+}
+
+/* 링크 전체 보호(우발적인 상위 스타일 덮임 방지) */
+.menu a:hover { color: #333; }
 /* 아직 인라인 블락과 블락이 헷갈린다 
   어디서 뭐를 적용해야 할지
   개념이 부족..*/
