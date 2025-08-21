@@ -11,6 +11,10 @@
 .footer-top {
   width: 100%;
 }
+.ft-navi{
+  width: 80%;
+  margin: auto;
+}
 .ft-navi > ul {
   width: 100%;
   display: flex;
@@ -23,7 +27,8 @@
   padding: 10px;
 }
 .footer-bottom {
-  width: 100%;
+  width: 80%;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   padding: 20px;

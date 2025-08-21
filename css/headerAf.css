@@ -43,32 +43,34 @@ HTML은 .menu-btn, #nav인데
 */
 .header-top {
   width: 100%;
-  /* position: fixed; */
+  position: fixed;
   /* background:#ff3c3c; */
   z-index: 9999;
   height: 60px;
 }
-.header-top-inner{
-  width: 80%;
-  height:40px;
+.header-top-inner {
+  width: 100%;
+  height: 40px;
   background-color: #fff;
-  display: flex;
-  position: fixed;
-    margin: auto;
-      align-items: center;
-   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
+ 
+  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
 }
-.header-top-inner::after{
+/* .header-top::after {
   content: "";
   width: 100%;
   height: 2px;
-background-color: #ff3c3c;
-bottom: 0;
-left: 0;
-position: absolute;
-
+  background-color: #ff3c3c;
+  bottom: 0;
+  left: 0;
+  position: absolute;
+} */
+.hd-top-inner{
+  width: 80%;
+   display: flex;
+  
+  margin: auto;
+  align-items: center;
 }
-
 .navi-1 {
   width: 100%;
   position: relative;
@@ -98,16 +100,16 @@ position: absolute;
 }
 .header-center {
   width: 100%;
-
+margin-top: 40px;
   /* Q 갭을 퍼센트로 줬는데
   반응형과 연관이 있는지
   픽셀이 나을지 */
 }
-.header-center-inner{
+.header-center-inner {
   width: 80%;
   display: flex;
   align-items: center;
-    margin: auto;
+  margin: auto;
   justify-content: flex-end;
   /* @@@@@@@@@@@@@@@@@@@@@@@@@@@
   몬가ㅣ 이상 ㅠㅠ */
@@ -157,7 +159,6 @@ position: absolute;
   outline: none;
 }
 
-
 /* 햄버거 버튼: 흰 바탕, 아이콘 #333 */
 .menu-btn {
   position: relative;
@@ -181,13 +182,13 @@ position: absolute;
 #menu {
   display: none; /* JS 토글 */
   position: fixed;
-  top: 60px; /* 버튼 높이만큼 띄우기 */
+  top: 40px; /* 버튼 높이만큼 띄우기 */
   left: 0;
   width: 280px;
   height: calc(100vh - 60px);
   background: #fff; /* 흰 */
   color: #333; /* 글자 #333 */
-  z-index: 1000;
+  z-index: 99999;
   padding: 20px 16px;
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
   overflow-y: auto;
@@ -278,7 +279,7 @@ position: absolute;
   position: relative;
   /* display: flex; */
 }
-.header-bottom-inner{
+.header-bottom-inner {
   width: 80%;
   position: relative;
   margin: auto;
@@ -295,13 +296,12 @@ position: absolute;
 }
 .header-bt-navi > ul {
   display: flex;
-  justify-content:space-between;
-  align-items: center
+  justify-content: space-between;
+  align-items: center;
 }
-.header-bt-navi > ul > li{
+.header-bt-navi > ul > li {
   line-height: 40px;
 }
-
 
 .navi-2 {
   width: 100%;
@@ -322,33 +322,35 @@ position: absolute;
   display: block;
 }
 
-  @media (max-width: 768px) {
-      .header-top-inner{
-  width: 100%;}
-    .hamburger {
-      display: flex;
-    }
-    .nav {
-      display: none; /* 기본은 안 보임 */
-      flex-direction: column;
-      background: #f5f5f5;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      padding: 10px;
-    }
-
-    .main-logo > a {
-      padding: 0 50px;
-    }
-    .nav.active {
-      display: flex; /* 햄버거 클릭 시 보임 */
-    }
+@media (max-width: 768px) {
+  .header-top-inner {
+    width: 100%;
+  }
+  .hamburger {
+    display: flex;
+  }
+  .nav {
+    display: none; /* 기본은 안 보임 */
+    flex-direction: column;
+    background: #f5f5f5;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    padding: 10px;
   }
 
+  .main-logo > a {
+    padding: 0 50px;
+  }
+  .nav.active {
+    display: flex; /* 햄버거 클릭 시 보임 */
+  }
+}
+
 @media screen and (max-width: 630px) {
-  .header-top-inner{
-  width: 100%;}
+  .header-top-inner {
+    width: 100%;
+  }
   .header-center {
     flex-direction: column;
   }
@@ -381,6 +383,4 @@ position: absolute;
   }
 
   /* 햄거거 */
-
-
 }

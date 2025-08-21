@@ -1,10 +1,19 @@
 /* 수정 목표
 card res 같이 줄이면 줄어들게 해보자.
 */
-
+.main{
+  width: 100%;
+  position: relative;
+}
+.main-inner{
+  width: 80%;
+  position: relative;
+  margin: auto;
+}
 /* first-section */
 .card1-inner {
-  width: 80%;
+  width: 100%;
+ padding: 40px 0;
   margin: auto;
   position: relative;
   display: flex;
@@ -65,7 +74,8 @@ width: 20%;
 }
 /* second-section */
 .card2-inner {
-  width: 80%;
+  width: 100%;
+   padding: 40px 0;
   margin: auto;
   position: relative;
   display: flex;
@@ -153,6 +163,7 @@ width: 20%;
   margin: auto;
   width: 80%;
   display: flex;
+   padding: 40px 0 60px 0;
 }
 .card4-left {
 width: 20%;
@@ -238,7 +249,8 @@ flex-direction: column
   width: 100%;
 }
 .card4-inner {
-flex-direction: column
+  width: 100%;
+
 }
 .card4-left{
   width: 100%;
@@ -272,7 +284,22 @@ notice
 
 }
 @media screen and (max-width: 390px) {
-  .flexBox li {
-    width: 100%;
-  }
+.card4-inner {
+flex-direction: column;
+  display: flex;
+ 
+}
+.card4-left {
+width: 100%;
+  text-align: center;
+}
+.first-card  {
+  width: 100%;
+  margin: auto;
+flex-direction: column;
+}
+.first-card > li {
+  width:70%;
+  margin: auto;
+}
 }
