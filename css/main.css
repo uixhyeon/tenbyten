@@ -65,6 +65,14 @@ span {
   font-weight: 600;
  font-size: clamp(0.8rem, 1vw, 2rem);
 }
+
+
+.inner {
+  width: 100%;
+  /* min-width: 1300px; */
+  margin: auto;
+  position: relative;
+}
 /* 인너설정을 해야하는데
 뭘해야 !
 ㅠㅠ 80% 90% 하는게 좋을지

@@ -2,12 +2,6 @@
 card res 같이 줄이면 줄어들게 해보자.
 */
 
-.inner {
-  width: 80%;
-  /* min-width: 1300px; */
-  margin: auto;
-  position: relative;
-}
 /* first-section */
 .card1-inner {
   width: 80%;

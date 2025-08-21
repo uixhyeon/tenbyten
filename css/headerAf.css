@@ -5,10 +5,12 @@
 }
 .header {
   width: 100%;
+  /* background-color: #ff3c3c; */
   position: relative;
 }
 .header-inner {
   width: 100%;
+  /* background-color: aqua; */
   display: flex;
   flex-direction: column;
   position: relative;
@@ -41,19 +43,41 @@ HTML은 .menu-btn, #nav인데
 */
 .header-top {
   width: 100%;
-  position: fixed;
-  background: #fff;
+  /* position: fixed; */
+  /* background:#ff3c3c; */
   z-index: 9999;
   height: 60px;
 }
+.header-top-inner{
+  width: 80%;
+  height:40px;
+  background-color: #fff;
+  display: flex;
+  position: fixed;
+    margin: auto;
+      align-items: center;
+   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
+}
+.header-top-inner::after{
+  content: "";
+  width: 100%;
+  height: 2px;
+background-color: #ff3c3c;
+bottom: 0;
+left: 0;
+position: absolute;
+
+}
+
 .navi-1 {
   width: 100%;
   position: relative;
 }
-.navi-1 ul {
+.navi-1 > ul {
   width: 100%;
   position: relative;
   display: flex;
+  align-items: center;
   justify-content: flex-end;
   gap: 2%;
 }
@@ -74,30 +98,39 @@ HTML은 .menu-btn, #nav인데
 }
 .header-center {
   width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 10%;
+
   /* Q 갭을 퍼센트로 줬는데
   반응형과 연관이 있는지
   픽셀이 나을지 */
+}
+.header-center-inner{
+  width: 80%;
+  display: flex;
+  align-items: center;
+    margin: auto;
+  justify-content: flex-end;
+  /* @@@@@@@@@@@@@@@@@@@@@@@@@@@
+  몬가ㅣ 이상 ㅠㅠ */
+  gap: 10%;
 }
 .main-logo {
   width: 30%;
 }
 .main-logo > a {
-  display: block;
+  /* display: block; */
+  /* 블락을 안해야 텍스트가 반응한다 */
   padding: 0 30px;
   font-family: "Baloo 2", sans-serif;
   font-weight: 1000;
 }
 .main-logo > a > h1 {
-  font-size: clamp(4rem, 5rem, 6rem);
+  font-size: clamp(2rem, 5rem, 6rem);
 }
 /* Q폰트웨잇이 어디서
 온걸까..
  */
 .search-bar {
-  width: 40%;
+  width: calc(100% - 30%);
   max-width: 60%;
   min-width: 20%;
   /* 민위스를 하면 줄어드나?
@@ -123,19 +156,16 @@ HTML은 .menu-btn, #nav인데
   border: none;
   outline: none;
 }
-.header-bottom {
-  width: 100%;
-  position: relative;
-  /* display: flex; */
-}
+
+
 /* 햄버거 버튼: 흰 바탕, 아이콘 #333 */
 .menu-btn {
   position: relative;
-  top: 16px;
-  left: 16px;
+  top: 0;
+  left: 0;
   z-index: 1001;
   border: none;
-  background: #fff;
+  background: transparent;
   color: #333;
   padding: 10px 12px;
   border-radius: 8px;
@@ -162,21 +192,9 @@ HTML은 .menu-btn, #nav인데
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
   overflow-y: auto;
 }
-/* nav#nav는 항상 보이게 */
-#nav {
-  display: block;
-  position: static;
-  background: transparent;
-  width: auto;
-  height: auto;
-  padding: 0;
-  box-shadow: none;
-}
-#nav > ul {
-  display: flex;
-}
+
 /* 리스트 기본 */
-.menu ul {
+.menu > ul {
   list-style: none;
   margin: 0;
   padding: 0;
@@ -255,6 +273,34 @@ HTML은 .menu-btn, #nav인데
   어디서 뭐를 적용해야 할지
   개념이 부족..*/
 
+.header-bottom {
+  width: 100%;
+  position: relative;
+  /* display: flex; */
+}
+.header-bottom-inner{
+  width: 80%;
+  position: relative;
+  margin: auto;
+}
+/* nav#nav는 항상 보이게 */
+.header-bt-navi {
+  display: block;
+  position: static;
+  background: transparent;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  box-shadow: none;
+}
+.header-bt-navi > ul {
+  display: flex;
+  justify-content:space-between;
+  align-items: center
+}
+.header-bt-navi > ul > li{
+  line-height: 40px;
+}
 
 
 .navi-2 {
@@ -276,7 +322,33 @@ HTML은 .menu-btn, #nav인데
   display: block;
 }
 
+  @media (max-width: 768px) {
+      .header-top-inner{
+  width: 100%;}
+    .hamburger {
+      display: flex;
+    }
+    .nav {
+      display: none; /* 기본은 안 보임 */
+      flex-direction: column;
+      background: #f5f5f5;
+      position: absolute;
+      top: 60px;
+      right: 20px;
+      padding: 10px;
+    }
+
+    .main-logo > a {
+      padding: 0 50px;
+    }
+    .nav.active {
+      display: flex; /* 햄버거 클릭 시 보임 */
+    }
+  }
+
 @media screen and (max-width: 630px) {
+  .header-top-inner{
+  width: 100%;}
   .header-center {
     flex-direction: column;
   }
@@ -310,25 +382,5 @@ HTML은 .menu-btn, #nav인데
 
   /* 햄거거 */
 
-  @media (max-width: 768px) {
-    .hamburger {
-      display: flex;
-    }
-    .nav {
-      display: none; /* 기본은 안 보임 */
-      flex-direction: column;
-      background: #f5f5f5;
-      position: absolute;
-      top: 60px;
-      right: 20px;
-      padding: 10px;
-    }
 
-    .main-logo > a {
-      padding: 0 50px;
-    }
-    .nav.active {
-      display: flex; /* 햄버거 클릭 시 보임 */
-    }
-  }
 }
