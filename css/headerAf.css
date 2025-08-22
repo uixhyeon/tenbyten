@@ -174,9 +174,6 @@ margin-top: 40px;
   font-size: 18px;
   line-height: 1;
 }
-.menu-btn:focus {
-  outline: 2px solid #333;
-}
 
 /* 메뉴 컨테이너: 버튼 아래에 시작 (겹침 방지) */
 #menu {
@@ -192,6 +189,9 @@ margin-top: 40px;
   padding: 20px 16px;
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
   overflow-y: auto;
+   scrollbar-width: none;
+   border-radius: 0 10px 10px 0;
+      /* 접히는 기준 → 위쪽 */
 }
 
 /* 리스트 기본 */
@@ -323,6 +323,10 @@ margin-top: 40px;
 }
 
 @media (max-width: 768px) {
+
+
+
+
   .header-top-inner {
     width: 100%;
   }
@@ -346,6 +350,16 @@ margin-top: 40px;
     display: flex; /* 햄버거 클릭 시 보임 */
   }
 }
+  .hd-top-inner{
+ width: 90%;
+  }
+  .header-center-inner{
+    width: 90%;
+    margin-top: 15px;
+    height: 70px;
+    gap: 0
+  }
+
 
 @media screen and (max-width: 630px) {
   .header-top-inner {
@@ -383,4 +397,27 @@ margin-top: 40px;
   }
 
   /* 햄거거 */
+}
+@media screen and (max-width: 600
+px){
+  .hd-top-inner{
+ width: 90%;
+  }
+  .header-center-inner{
+    width: 90%;
+    margin-top: 15px;
+    height: 70px;
+    gap: 0
+  }
+  .main-logo{
+    margin-left: 10px;
+    width: 150px;
+  }
+.main-logo > a >h1{
+  font-size: 40px;
+}
+.header-bt-navi > ul >li >a{
+  font-size: 12px;
+}
+
 }

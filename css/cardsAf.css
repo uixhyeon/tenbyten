@@ -225,7 +225,12 @@ flex를 colum으로 수정
 수정하고 width도 수정
 */
 .card1-inner {
+
 flex-direction: column
+
+}
+.main-inner{
+  width: 90%;
 }
 .card1-left{
   width: 100%;
@@ -235,6 +240,7 @@ flex-direction: column
 }
 .card1-right{
   width: 100%;
+  padding: 0;
 }
 .card2-inner{
 flex-direction: column
@@ -247,13 +253,17 @@ flex-direction: column
 }
 .card2-right{
   width: 100%;
+   padding: 0;
+}
+.card3-bottom{
+  padding: 0;
 }
 .card4-inner {
   width: 100%;
 
 }
 .card4-left{
-  width: 100%;
+  width: 30%;
   text-align: left;
   padding: 10px;
   margin: 0;
@@ -284,6 +294,27 @@ notice
 
 }
 @media screen and (max-width: 390px) {
+  .main-inner{
+width: 90%;
+  }
+
+.first-card  {
+  width: 100%;
+  margin: auto;
+   height: 800px ;
+flex-direction: column;
+}
+.first-card > li {
+  width:70%;
+  margin: auto;
+}
+.card2-right{
+  padding: 0;
+}
+.card3-bottom{
+  padding: 0;
+}
+
 .card4-inner {
 flex-direction: column;
   display: flex;
@@ -293,13 +324,10 @@ flex-direction: column;
 width: 100%;
   text-align: center;
 }
-.first-card  {
-  width: 100%;
-  margin: auto;
-flex-direction: column;
+.card4-right{
+  padding: 0;
 }
-.first-card > li {
-  width:70%;
-  margin: auto;
+.fourth-card > li{
+  flex: 1 1 calc(50% - 2px)
 }
 }

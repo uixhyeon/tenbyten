@@ -91,19 +91,36 @@
   /* 
 뉴스 글자 지우기
 */
-
+.news-scr{
+  margin: auto;
+}
 .news-wrap{
-  padding: 50px 0 ;
- }
+  width: 100%;
+  padding: 0;
+}
+.news_title > h3 {
+font-size: 16px;
+}
+.news-box{
+  padding: 0;
+  width: 90%;
+  margin: auto;
+}
 
   .news-scr > a > p {
     display: none;
   }
-
+.news-scr{
+  width: 90%;
+}
   /* 마진 줄이기 */
   .news-box {
-    padding: 50px 70px ;
+ width: 100%;
   }
+  .news-left{
+    width: 100%;
+  }
+
   .notice {
     margin-top: 20px;
     height: 55px;
@@ -125,5 +142,27 @@
 .news-wrap{
   padding: 50px 0 ;
  }
+ 
+  .notice {
+    margin-top: 20px;
+    height: 55px;
+padding: 20px;
+  }
+  .store {
+    margin-top: 20px;
+    height: 55px;
+    padding: 20px;
+  }
+  .news-center {
+    margin-top: 20px;
+    height: 55px;
+    padding: 20px;
+  }
+  .news-right {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    height: 55px;
+    padding: 20px;
+  }
 }
 
