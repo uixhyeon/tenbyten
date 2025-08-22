@@ -16,31 +16,7 @@
   position: relative;
   margin: auto;
 }
-/*  
-@@@@@@@@@@@@
-헤더 이너를 제거하고 다시 넣어야함
-해야할것
 
-
-고정 요소의 컨테이닝 문제
-.header-top이 position: fixed인데,
- 이 상태에선 부모의 width:80% ( .header-inner )를
-  따라가지 않습니다. 뷰포트 기준으로 
-  붙으면서 좌우 기준점(left:0; right:0; top:0)을 
-  안 준 탓에 위치가 애매해지고, 
-  안쪽 콘텐츠 배치도 어긋나 보여요.
-
-고정바 높이만큼 상단 여백 미지정
-고정된 60px만큼 본문을 내려주지 않아서,
- 바로 아래 요소들이 겹쳐 보입니다.
-
-셀렉터/이름 불일치 + media 중첩
-HTML은 .menu-btn, #nav인데 
-미디어쿼리엔 .hamburger, .nav가 나와서 
-모바일에서 의도와 다르게 동작합니다.
- 또한 @media 안에 또 @media를 넣어 괄호/범위가 
- 꼬일 위험이 있어요(일반 CSS에선 권장 X).
-*/
 .header-top {
   width: 100%;
   position: fixed;

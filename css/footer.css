@@ -11,7 +11,7 @@
 .footer-top {
   width: 100%;
 }
-.ft-navi{
+.ft-navi {
   width: 80%;
   margin: auto;
 }
@@ -97,11 +97,10 @@
     width: 100%;
   }
 
- 
   .ft-right {
     display: flex;
-  flex-direction: column;
-  justify-content: right;
+    flex-direction: column;
+    justify-content: right;
     width: 100%;
   }
   .ft-r-top {
@@ -111,19 +110,18 @@
     /* flex-direction: column;  */
     padding: 5px;
   }
-  
+
   /* 
 @@@@@@@@@@@@@@@@@@@@@@@여기 조정하기
 */
   .ft-r-bottom {
-
     max-width: 350px;
     display: block;
   }
-  .footer-bottom{
+  .footer-bottom {
     padding: 0;
   }
-  .ft-center{
+  .ft-center {
     width: 100%;
   }
   .ft-r-bottom > a {
@@ -133,30 +131,52 @@
   }
 }
 @media screen and (max-width: 600px) {
-  .ft-navi > ul{
+  .ft-navi > ul {
     justify-content: space-between;
-    
   }
-.ft-left > a >h2{
-  font-size: 30px;
+  .ft-left > a > h2 {
+    font-size: 30px;
+  }
+  .ft-r-top {
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+  }
+  .ft-r-bottom {
+    width: 100%;
+  }
 }
-
-}
-@media screen and (max-width: 390px){
-.sub-logo{
-  margin-bottom: 10px;
-}
-.ft-r-top{
-  width: 100%;
-  justify-content: center;
-  gap: 10px;
-  margin: 0;
-  padding: 0;
-}
-.ft-r-bottom>a > p > span{
-  font-size: 12px;
-}
-.ft-r-bottom{
-  width: 100%;
-}
+@media screen and (max-width: 390px) {
+  .sub-logo {
+    margin-bottom: 10px;
+  }
+  .ft-r-top {
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+    margin: 20px 0;
+    padding: 0;
+  }
+  .ft-r-bottom > a > p > span {
+    font-size: 12px;
+  }
+  .ft-r-bottom {
+    width: 100%;
+  }
+  .ft-navi {
+    width: 90%;
+  }
+  .ft-navi > ul > li > a {
+    font-size: 11px;
+    padding: 0;
+    line-height: 30px;
+  }
+  .ft-center > p {
+    line-height: 20px;
+  }
+  .ft-r-bottom > a > p {
+    line-height: 20px;
+  }
 }

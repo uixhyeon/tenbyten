@@ -1,0 +1,104 @@
+/* 수정 목표
+card res 같이 줄이면 줄어들게 해보자.
+*/
+
+.inner {
+  /* width: 80%;
+  margin: auto;
+  position: relative; */
+}
+/* first-section */
+.card1-inner {
+  /* width: 100%;
+  margin: auto;
+  position: relative; */
+  /* display: flex; */
+  /* background: url(../images/bg_pattern_slash.png) 0 0 repeat; */
+}
+/* .card1-inner {
+  display: flex;
+  padding: 20px;
+}
+
+.card1-left {
+  width: 280px;
+  text-align: center;
+  margin-top: 60px;
+}
+.card1-right {
+  width: calc(100% - 280px);
+} */
+.card {
+  /* display: flex;
+  justify-content: space-around;
+*/
+}
+.card > li > a {
+  /* text-align: center;
+  font-size: 18px;
+  font-weight: 600; */
+}
+.first-card > li > a > img {
+  /* display: block;
+  border: solid 10px rgb(255, 193, 193);
+  border-radius: 160px; */
+}
+/* second-section */
+.card2-inner {
+  /* display: flex;
+  padding: 20px; */
+}
+/* .card2-left {
+  width: 280px;
+  text-align: left;
+  margin-top: 60px;
+} */
+
+
+/* third-section */
+/* .card3-inner {
+  padding: 20px;
+}
+.card3-top {
+  text-align: center;
+  padding: 50px;
+} */
+/* .box {
+  width: 800px;
+  height: 500px;
+  position: relative;
+  overflow: hidden;
+}
+.box > img {
+  width: 30%;
+  position: absolute;
+  top: -100px;
+  left: 0;
+  display: block;
+  width: 100%;
+} */
+.third-card {
+  /* display: flex;  */
+}
+/* fourth-section */
+/* .card4-inner {
+  display: flex;
+  padding: 20px;
+}
+
+.card4-left {
+  width: 280px;
+  text-align: left;
+  margin-top: 60px;
+} */
+/* .card4-right {
+  width: calc(100% - 280px);
+}
+.box2 {
+  padding: 20px;
+} */
+/* .fourth-card-1 {
+  display: flex;
+  padding: 0 20px;
+  justify-content: center;
+} */
