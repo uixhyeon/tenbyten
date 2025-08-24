@@ -28,7 +28,7 @@
   width: 100%;
   height: 40px;
   background-color: #fff;
- 
+
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
 }
 /* .header-top::after {
@@ -40,10 +40,10 @@
   left: 0;
   position: absolute;
 } */
-.hd-top-inner{
+.hd-top-inner {
   width: 80%;
-   display: flex;
-  
+  display: flex;
+
   margin: auto;
   align-items: center;
 }
@@ -76,7 +76,7 @@
 }
 .header-center {
   width: 100%;
-margin-top: 40px;
+  margin-top: 40px;
   /* Q 갭을 퍼센트로 줬는데
   반응형과 연관이 있는지
   픽셀이 나을지 */
@@ -165,9 +165,9 @@ margin-top: 40px;
   padding: 20px 16px;
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
   overflow-y: auto;
-   scrollbar-width: none;
-   border-radius: 0 10px 10px 0;
-      /* 접히는 기준 → 위쪽 */
+  scrollbar-width: none;
+  border-radius: 0 10px 10px 0;
+  /* 접히는 기준 → 위쪽 */
 }
 
 /* 리스트 기본 */
@@ -223,9 +223,6 @@ margin-top: 40px;
 .dropdown-menu.show {
   max-height: 500px;
 } /* 충분히 큰 값 */
-.dropdown-menu.hide {
-  max-height: 0;
-}
 
 /* 서브메뉴 항목: 흰/#333, hover 시 밑줄만 */
 .dropdown-menu li a {
@@ -299,10 +296,6 @@ margin-top: 40px;
 }
 
 @media (max-width: 768px) {
-
-
-
-
   .header-top-inner {
     width: 100%;
   }
@@ -326,16 +319,15 @@ margin-top: 40px;
     display: flex; /* 햄버거 클릭 시 보임 */
   }
 }
-  .hd-top-inner{
- width: 90%;
-  }
-  .header-center-inner{
-    width: 90%;
-    margin-top: 15px;
-    height: 70px;
-    gap: 0
-  }
-
+.hd-top-inner {
+  width: 90%;
+}
+.header-center-inner {
+  width: 90%;
+  margin-top: 15px;
+  height: 70px;
+  gap: 0;
+}
 
 @media screen and (max-width: 630px) {
   .header-top-inner {
@@ -375,25 +367,30 @@ margin-top: 40px;
   /* 햄거거 */
 }
 @media screen and (max-width: 600
-px){
-  .hd-top-inner{
- width: 90%;
+px) {
+  .hd-top-inner {
+    width: 90%;
   }
-  .header-center-inner{
+  .header-center-inner {
     width: 90%;
     margin-top: 15px;
     height: 70px;
-    gap: 0
+    gap: 0;
   }
-  .main-logo{
+  .main-logo {
     margin-left: 10px;
     width: 150px;
   }
-.main-logo > a >h1{
-  font-size: 40px;
+  .main-logo > a > h1 {
+    font-size: 40px;
+  }
+  .header-bt-navi > ul > li > a {
+    font-size: 12px;
+  }
 }
-.header-bt-navi > ul >li >a{
-  font-size: 12px;
-}
-
+/* 못찾아서 덧붙임 */
+.hd-top-inner,
+.header-center-inner,
+.header-bottom-inner {
+  width: 80%;
 }

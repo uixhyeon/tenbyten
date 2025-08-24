@@ -102,6 +102,17 @@ menuBtn.addEventListener("click", function () {
   menuBox.style.display = showing ? "none" : "block";
   menuBtn.setAttribute("aria-expanded", (!showing).toString());
 });
+menuBtn.addEventListener("click", function () {
+  if (menuBox.style.display === "block") {
+    // 현재 보이는 상태라면 -> 숨기기
+    menuBox.style.display = "none";
+    menuBtn.setAttribute("aria-expanded", "false");
+  } else {
+    // 현재 숨겨진 상태라면 -> 보이기
+    menuBox.style.display = "block";
+    menuBtn.setAttribute("aria-expanded", "true");
+  }
+});
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 // 드롭다운(상위 항목 클릭 시 서브메뉴 슬라이드)
 var dropdowns = document.querySelectorAll(".dropdown");

@@ -42,12 +42,16 @@ window.addEventListener("load", function () {
 // 비주얼 스와이퍼 끝
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 //토글// 햄버거: 메뉴 열기/닫기 (display 토글)
-window.addEventListener("load",function(){
-const hamBtn =this.document.querySelector("#hamburger")
-const hamMenu = this.document.querySelector("#menu")
-hamBtn.addEventListener("click", function(){
-  hamMenu.classList.add()
-})
 
+const hamBtn = this.document.querySelector("#hamburger");
+const hamMenu = this.document.querySelector("#menu");
 
-})
+hamBtn.addEventListener("click", function () {
+  if (hamMenu.style.display === "block") {
+    hamMenu.style.delay = "none";
+    hamBtn.setAttribute("aria-expanded", "false");
+  } else {
+    hamMenu.style.display = "block";
+    hamBtn.setAttribute("aria-expanded", "true");
+  }
+});
