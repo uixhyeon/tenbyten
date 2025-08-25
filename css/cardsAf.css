@@ -1,11 +1,11 @@
 /* 수정 목표
 card res 같이 줄이면 줄어들게 해보자.
 */
-.main{
+.main {
   width: 100%;
   position: relative;
 }
-.main-inner{
+.main-inner {
   width: 80%;
   position: relative;
   margin: auto;
@@ -13,26 +13,22 @@ card res 같이 줄이면 줄어들게 해보자.
 /* first-section */
 .card1-inner {
   width: 100%;
- /* padding: 40px 0; */
+  /* padding: 40px 0; */
   margin: auto;
   position: relative;
   display: flex;
   background: url(../images/bg_pattern_slash.png) 0 0 repeat;
 }
 .card1-left {
-width: 20%;
+  width: 20%;
   text-align: left;
   margin-top: 60px;
   padding: 0 30px;
-
 }
 .card1-right {
   width: calc(100% - 15%);
-  padding: 30px;
-  padding-bottom: 50px;
 }
 .card > li {
-
   margin-bottom: 20px;
 }
 
@@ -49,7 +45,7 @@ width: 20%;
   width: 100%;
   /* 이게 크기를 작아지게 하는것 
     기억하기 */
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .first-card {
@@ -76,7 +72,7 @@ width: 20%;
 /* second-section */
 .card2-inner {
   width: 100%;
-   /* padding: 40px 0; */
+  /* padding: 40px 0; */
   margin: auto;
   position: relative;
   display: flex;
@@ -150,11 +146,10 @@ width: 20%;
   left: 0;
   display: block;
   width: 100%;
- 
 }
-.card > li > a > p{
+.card > li > a > p {
   line-height: 20px;
-} 
+}
 
 /* fourth-section */
 .card4 {
@@ -164,14 +159,13 @@ width: 20%;
   margin: auto;
   width: 80%;
   display: flex;
-   /* padding: 40px 0 60px 0; */
+  /* padding: 40px 0 60px 0; */
 }
 .card4-left {
-width: 20%;
+  width: 20%;
   text-align: left;
   margin-top: 60px;
   padding: 50px;
-
 }
 
 .card4-right {
@@ -204,138 +198,126 @@ re>willbe 0811이 더 적절
    card의 li를 수정
   
   */
-.first-card > li {
-  width: calc((100% - 4%) / 3);
-}
-.second-card > li {
-  width: calc((100% - 2%) / 2);
-}
-.third-card > li {
-  width: calc((100%) / 1);
-}
-.fourth-card {
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 2px;
-}
-/* 
+  .first-card > li {
+    width: calc((100% - 4%) / 3);
+  }
+  .second-card > li {
+    width: calc((100% - 2%) / 2);
+  }
+  .third-card > li {
+    width: calc((100%) / 1);
+  }
+  .fourth-card {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2px;
+  }
+  /* 
 card
 flex를 colum으로 수정
 수정하고 width도 수정
 */
-.card1-inner {
-
-flex-direction: column
-
-}
-.main-inner{
-  width: 90%;
-}
-.card1-left{
-  width: 100%;
-  text-align: center;
-  padding: 50px;
-  margin: 0;
-}
-.card1-right{
-  width: 100%;
-  padding: 30px;
-  padding-bottom: 50px;
-}
-.card2-inner{
-flex-direction: column
-}
-.card2-left{
-   width: 100%;
-  text-align: center;
-  padding: 50px;
+  .card1-inner {
+    flex-direction: column;
+  }
+  .main-inner {
+    width: 90%;
+  }
+  .card1-left {
+    width: 100%;
+    text-align: center;
+    padding: 50px;
     margin: 0;
-}
-.card2-right{
-  width: 100%;
-   padding: 0;
-}
-.card3-bottom{
-  padding: 0;
-}
-.card4-inner {
-  width: 100%;
+  }
+  .card1-right {
+    width: 100%;
+  }
+  .card2-inner {
+    flex-direction: column;
+  }
+  .card2-left {
+    width: 100%;
+    text-align: cente;
+    padding: 50px;
+    margin: 0;
+  }
+  .card2-right {
+    width: 100%;
+    padding: 0;
+  }
+  .card3-bottom {
+    padding: 0;
+  }
+  .card4-inner {
+    width: 100%;
+  }
+  .card4-left {
+    width: 30%;
+    text-align: left;
+    margin: 0;
+  }
 
-}
-.card4-left{
-  width: 30%;
-  text-align: left;
-  margin: 0;
-}
-
-
-.card4-right{
-  width: 100%;
-}
-/* 
+  .card4-right {
+    width: 100%;
+  }
+  /* 
 notice
 */
-
-
-
-
 }
 @media screen and (max-width: 768px) {
   .inner {
     width: 90%;
   }
-.card4-left{
-width: 100%;
-text-align: center;
-}
+  .card4-left {
+    width: 100%;
+    text-align: center;
+  }
   /* card1dkakk,,, */
-.card1-left > span{
- font-size: clamp(1.5rem, 3vw, 2.5rem);
-}
-.card4-inner {
-flex-direction: column;
-  display: flex;
- 
-}
+  .card1-left > span {
+    font-size: clamp(1.5rem, 3vw, 2.5rem);
+  }
+  .card4-inner {
+    flex-direction: column;
+    display: flex;
+  }
 }
 @media screen and (max-width: 390px) {
-  .main-inner{
-width: 90%;
+  .main-inner {
+    width: 90%;
   }
 
-.first-card  {
-  width: 100%;
-  margin: auto;
+  .first-card {
+    width: 100%;
+    margin: auto;
 
-flex-direction: column;
-}
-.first-card > li {
-  width:70%;
-  margin: auto;
- margin-bottom: 30px;
-}
-.card2-right{
-  padding: 0;
-}
-.card3-bottom{
-  padding: 0;
-}
+    flex-direction: column;
+  }
+  .first-card > li {
+    width: 70%;
+    margin: auto;
+    margin-bottom: 30px;
+  }
+  .card2-right {
+    padding: 0;
+  }
+  .card3-bottom {
+    padding: 0;
+  }
 
-.card4-inner {
-flex-direction: column;
-  display: flex;
- 
-}
-.card4-left {
-width: 100%;
-  text-align: center;
-}
-.card4-right{
-  padding: 0;
-}
-.fourth-card > li{
-  flex: 1 1 calc(50% - 2px)
-}
+  .card4-inner {
+    flex-direction: column;
+    display: flex;
+  }
+  .card4-left {
+    width: 100%;
+    text-align: center;
+  }
+  .card4-right {
+    padding: 0;
+  }
+  .fourth-card > li {
+    flex: 1 1 calc(50% - 2px);
+  }
 }

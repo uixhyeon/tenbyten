@@ -43,15 +43,77 @@ window.addEventListener("load", function () {
 //@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 //토글// 햄버거: 메뉴 열기/닫기 (display 토글)
 
-const hamBtn = this.document.querySelector("#hamburger");
-const hamMenu = this.document.querySelector("#menu");
+window.addEventListener("load", function () {
+  const hamBtn = this.document.querySelector("#hamburger");
+  const hamMenu = this.document.querySelector("#menu");
 
-hamBtn.addEventListener("click", function () {
-  if (hamMenu.style.display === "block") {
-    hamMenu.style.delay = "none";
-    hamBtn.setAttribute("aria-expanded", "false");
-  } else {
-    hamMenu.style.display = "block";
-    hamBtn.setAttribute("aria-expanded", "true");
-  }
+  hamBtn.addEventListener("click", function () {
+    if (hamMenu.classList.contains("open")) {
+      hamMenu.classList.remove("open");
+    } else {
+      hamMenu.classList.add("open");
+    }
+    //햄버튼 클릭 닫기
+  });
+
+  //윈도우 로드 닫기
+});
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//드롭다운
+const dropdowns = document.querySelectorAll(".dropdown");
+
+dropdowns.forEach(function (dr) {
+  const drBtn = dr.querySelector('a[data-toggle="dropdown"]');
+  const drSubmenu = dr.querySelector(".dropdown-menu");
+  //  const drArrow = dr.querySelector(".icon-arrow");
+
+  //시작
+  //토글기능
+  drBtn.addEventListener("click", function (e) {
+    // button → drBtn 수정
+    e.preventDefault(); // a태그 기본 동작 막기
+
+    const openB = drSubmenu.classList.contains("show");
+    if (openB) {
+      drSubmenu.classList.remove("show");
+      drSubmenu.classList.add("hide");
+    } else {
+      drSubmenu.classList.add("show");
+      drSubmenu.classList.remove("hide");
+    }
+    //버튼 클릭 이벤트 끝
+  });
+  //끝
+
+  //드롭다운 forEach 함수닫
+});
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+//아코디언
+window.addEventListener("load", function () {
+  //시작
+  const accordions = document.querySelectorAll(".accordion-item");
+
+  accordions.forEach(function (item) {
+    const header = item.querySelector(".accordion-header");
+    const content = item.querySelector(".accordion-content");
+
+    header.addEventListener("click", function () {
+      const isOpen = item.classList.contains("open");
+
+      // 열려 있는 다른 아코디언 닫기
+      accordions.forEach(function (i) {
+        i.classList.remove("open");
+        i.querySelector(".accordion-content").style.display = "none";
+      });
+
+      // 현재 클릭한 아코디언 토글
+      if (!isOpen) {
+        item.classList.add("open");
+        content.style.display = "block";
+      }
+    });
+  });
+  //끝
+
+  //윈도우 로드 닫기
 });

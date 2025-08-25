@@ -167,7 +167,7 @@ justify-content: space-around;
 }
 
 /* 메뉴 컨테이너: 버튼 아래에 시작 (겹침 방지) */
-#menu {
+#menu{
   display: none; /* JS 토글 */
   position: fixed;
   top: 40px; /* 버튼 높이만큼 띄우기 */
@@ -178,13 +178,15 @@ justify-content: space-around;
   color: #333; /* 글자 #333 */
   z-index: 99999;
   padding: 20px 16px;
-  box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 1px 0 20px rgba(0, 0, 0, 0.05);
   overflow-y: auto;
   scrollbar-width: none;
   border-radius: 0 10px 10px 0;
   /* 접히는 기준 → 위쪽 */
 }
-
+#menu.open{
+  display: block;
+}
 /* 리스트 기본 */
 .menu > ul {
   list-style: none;

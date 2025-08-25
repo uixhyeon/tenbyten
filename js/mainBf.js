@@ -122,8 +122,6 @@ dropdowns.forEach(function (el) {
   var submenu = el.querySelector(".dropdown-menu");
   var arrow = el.querySelector(".icon-arrow"); // 화살표는 고정, 회전 X
 
-
-
   // 버튼 클릭 시 슬라이드 토글 (화살표 클래스 조작 제거)
 
   //@@@@@@@@@@@@@@
