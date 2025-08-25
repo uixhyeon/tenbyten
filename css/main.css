@@ -2,14 +2,11 @@
 
 @import url(headerAf.css);
 @import url(visual.css);
-@import url(swiper.css);
-@import url(cardsBf.css);
 @import url(cardsAf.css);
 @import url(news.css);
 @import url(footer.css);
 
 /* 10X10에 있던 default */
-
 
 * {
   margin: 0;
@@ -20,18 +17,18 @@ ul,
 li {
   list-style: none;
 }
-a{
+a {
   text-decoration: none;
   color: #333;
   font: "Orbitron", sans-serif;
-   font-size: 14px;
+  font-size: 14px;
 }
 
 p {
   text-decoration: none;
   color: #333;
   font: "Orbitron", sans-serif;
-   font-size: clamp(0.8rem, 1vw, 2rem);
+  font-size: clamp(0.8rem, 1vw, 2rem);
 }
 body {
   width: 100%;
@@ -43,7 +40,7 @@ html {
   font-size: 14px;
   font-weight: 500;
 }
-img{
+img {
   display: block;
 }
 .wrap {
@@ -63,9 +60,8 @@ h6 {
 span {
   color: rgb(240, 70, 70);
   font-weight: 600;
- font-size: clamp(0.8rem, 1vw, 2rem);
+  font-size: clamp(0.8rem, 1vw, 2rem);
 }
-
 
 .inner {
   width: 100%;
@@ -84,7 +80,6 @@ AAAA일단 헤더는 100%로 설정하고
 
 /* 있다 햄버거 해야함 */
 
-
 /* 
 기억할 정보
 
@@ -101,3 +96,14 @@ F7F7F7
 .navi ul {
   display: flex;
 } */
+
+a, p ,h1, h2, h3, h4, h5, h6{
+    line-height: 1.5;
+    align-items: center;
+}
+
+.space{
+  width: 100%;
+  height: 5px;
+  background-color: transparent;
+}

@@ -31,7 +31,7 @@
   margin: auto;
   display: flex;
   justify-content: space-between;
-  padding: 20px;
+  padding: 30px;
 }
 .ft-left {
   width: 20%;
@@ -43,11 +43,19 @@
 }
 .ft-center {
   width: 40%;
+  position: relative;
 }
+
+
+
 .ft-center > p > a {
   font-size: 0.8rem;
   text-align: center;
   color: rgb(138, 138, 138);
+}
+.ft-center >p, a {
+  font-size: clamp(0.8rem, 1vw, 2rem);
+text-align: left;
 }
 .ft-right {
   width: 30%;
@@ -55,7 +63,8 @@
 .ft-r-top {
   display: flex;
   width: 100%;
-  padding: 20px;
+  padding: 30px 0;
+   margin: 20px 10px ;
 }
 .ft-r-top > a > img {
   width: 50px;
@@ -63,11 +72,11 @@
 }
 .ft-r-bottom {
   background-color: #f7f7f7;
-  padding: 20px;
+  padding: 30px;
   border-radius: 20px;
 }
 .ft-r-bottom > a > p > span {
-  font-size: 1rem;
+  font-size: clamp(0.8rem, 1vw, 2rem);
   color: rgb(138, 138, 138);
   text-decoration: none;
 }
@@ -104,11 +113,11 @@
     width: 100%;
   }
   .ft-r-top {
-    margin: 10px;
-    width: 30%;
-    gap: 20px;
-    /* flex-direction: column;  */
-    padding: 5px;
+    width: 100%;
+    gap: 10px;
+      width: 100%;
+  padding: 10px 0;
+   margin: 10px 10px ;
   }
 
   /* 
@@ -139,10 +148,10 @@
   }
   .ft-r-top {
     width: 100%;
-    justify-content: center;
     gap: 10px;
-    margin: 0;
-    padding: 0;
+      width: 100%;
+  padding: 10px 0;
+   margin: 10px 10px ;
   }
   .ft-r-bottom {
     width: 100%;
@@ -154,10 +163,10 @@
   }
   .ft-r-top {
     width: 100%;
-    justify-content: center;
     gap: 10px;
-    margin: 20px 0;
-    padding: 0;
+      width: 100%;
+  padding: 10px 0;
+   margin: 10px 10px ;
   }
   .ft-r-bottom > a > p > span {
     font-size: 12px;
@@ -167,9 +176,10 @@
   }
   .ft-navi {
     width: 90%;
+    
   }
   .ft-navi > ul > li > a {
-    font-size: 11px;
+   font-size: clamp(0.8rem, 1vw, 2rem);
     padding: 0;
     line-height: 30px;
   }

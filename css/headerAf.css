@@ -22,11 +22,11 @@
   position: fixed;
   /* background:#ff3c3c; */
   z-index: 9999;
-  height: 60px;
+  /* height: 60px; */
 }
 .header-top-inner {
   width: 100%;
-  height: 40px;
+  /* height: 40px; */
   background-color: #fff;
 
   box-shadow: 2px 0 12px rgba(0, 0, 0, 0.15);
@@ -41,12 +41,29 @@
   position: absolute;
 } */
 .hd-top-inner {
-  width: 80%;
+width: 100%;
+  margin: auto
+}
+.hd-top-inin{
+    width: 80%;
   display: flex;
 
   margin: auto;
   align-items: center;
 }
+
+
+.hd-top-inner {
+  width: 100%;
+}
+.header-center-inner {
+  width: 80%;
+  margin-top: 15px;
+  height: 70px;
+  gap: 0;
+  display: flex;
+}
+
 .navi-1 {
   width: 100%;
   position: relative;
@@ -67,12 +84,12 @@
 /* 계쩡 주눈 방바구니가 안움직인다.
 어디를 고쳐야할까 A여유공간이 없어서 */
 .navi-1 ul li {
-  width: 80px;
+  width: 100px;
   text-align: center;
 }
 .navi-1 > ul > li > a {
   line-height: 40px;
-  font-size: 14px;
+ font-size: clamp(0.8rem, 1vw, 2rem);
 }
 .header-center {
   width: 100%;
@@ -86,9 +103,7 @@
   display: flex;
   align-items: center;
   margin: auto;
-  justify-content: flex-end;
-  /* @@@@@@@@@@@@@@@@@@@@@@@@@@@
-  몬가ㅣ 이상 ㅠㅠ */
+justify-content: space-around;
   gap: 10%;
 }
 .main-logo {
@@ -108,9 +123,9 @@
 온걸까..
  */
 .search-bar {
-  width: calc(100% - 30%);
-  max-width: 60%;
-  min-width: 20%;
+  width: 70%;
+  max-width: 700px;
+  min-width: 200px;
   /* 민위스를 하면 줄어드나?
   잘 못알아보겠다 */
   /* 밑에 이게 있었다 ㅎㅎ */
@@ -118,10 +133,10 @@
   min-width: 337px; */
   /* 퍼센트가 따로노는것 같은데
   일정하게 해야할까 */
-  height: 60px;
+  /* height: 60px; */
   background-color: #fff;
   display: flex;
-  padding: 10px 25px;
+  padding: 1% 2%;
   border-radius: 30px;
   border: solid #ff3c3c 5px;
   box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
@@ -253,7 +268,7 @@
   /* display: flex; */
 }
 .header-bottom-inner {
-  width: 80%;
+  width: 100%;
   position: relative;
   margin: auto;
 }
@@ -268,8 +283,10 @@
   box-shadow: none;
 }
 .header-bt-navi > ul {
+  width: 80%;
+  margin: auto;
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
   align-items: center;
 }
 .header-bt-navi > ul > li {
@@ -295,10 +312,33 @@
   display: block;
 }
 
+
+@media (max-width: 1010px){
+
+.hd-top-inin{
+    width: 90%;
+
+}
+
+.header-center-inner {
+  width: 90%;
+  margin-top: 15px;
+  height: 70px;
+  gap: 0;
+  display: flex;
+}
+.header-bt-navi > ul {
+  width: 90%;
+}
+}
 @media (max-width: 768px) {
   .header-top-inner {
     width: 100%;
   }
+  .hd-top-inin{
+    width: 90%;
+
+}
   .hamburger {
     display: flex;
   }
@@ -319,20 +359,15 @@
     display: flex; /* 햄버거 클릭 시 보임 */
   }
 }
-.hd-top-inner {
-  width: 90%;
-}
-.header-center-inner {
-  width: 90%;
-  margin-top: 15px;
-  height: 70px;
-  gap: 0;
-}
 
 @media screen and (max-width: 630px) {
   .header-top-inner {
     width: 100%;
   }
+  .hd-top-inin{
+    width: 90%;
+
+}
   .header-center {
     flex-direction: column;
   }
@@ -353,12 +388,12 @@
   */
     align-items: center;
   }
-  .search-bar {
+  /* .search-bar {
     width: 80%;
     max-width: 80%;
     min-width: 20%;
     height: 50px;
-  }
+  } */
 
   .navi-2 > ul > li {
     line-height: 30px;
@@ -366,11 +401,14 @@
 
   /* 햄거거 */
 }
-@media screen and (max-width: 600
-px) {
+@media screen and (max-width: 600px) {
   .hd-top-inner {
-    width: 90%;
+    width: 100%;
   }
+  .hd-top-inin{
+    width: 90%;
+
+}
   .header-center-inner {
     width: 90%;
     margin-top: 15px;
@@ -388,9 +426,32 @@ px) {
     font-size: 12px;
   }
 }
-/* 못찾아서 덧붙임 */
-.hd-top-inner,
-.header-center-inner,
-.header-bottom-inner {
-  width: 80%;
+
+@media screen and (max-width: 450px) {
+.hd-top-inner{
+width: 100%;
+margin: auto;
+display: flex;
+
+}
+.navi-1 > ul{
+  justify-content: space-around;
+}
+.navi-1 > ul > li{
+width: 60px;
+
+
+}
+.hd-top-inin{
+    width: 90%;
+
+}
+}
+@media screen and (max-width: 390px) {
+
+.hd-top-inin{
+    width: 100%;
+
+}
+
 }

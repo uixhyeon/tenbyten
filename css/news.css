@@ -91,62 +91,93 @@
   /* 
 뉴스 글자 지우기
 */
-.news-scr{
-  margin: auto;
-}
-.news-wrap{
-  width: 100%;
-  padding: 0;
-}
-.news_title > h3 {
-font-size: 16px;
-}
-.news-box{
-  padding: 0;
-  width: 90%;
-  margin: auto;
-}
 
-  .news-scr > a > p {
-    display: none;
+/* 폰트 바꾸기 웨잇은 굵게 */
+  /* font-size: clamp(0.8rem, 1vw, 2rem); */
+  .news-scr {
+    margin: auto;
   }
-.news-scr{
-  width: 90%;
-}
-  /* 마진 줄이기 */
+  .news-wrap {
+    width: 100%;
+    padding: 30px;
+  }
+
+
+   /* 마진 줄이기 */
   .news-box {
- width: 100%;
+      padding: 30px;
+    width: 90%;
+    margin: auto;
+  }
+    .news-left{
+        width: 100%;
+padding: 0;
+  }
+   .news-scr {
+    width: 90%;
+    padding: 0;
+  }
+   .news-scr > a > p {
+    display: none;
+  padding: 0;
+  }
+ 
+  .notice{
+      padding: 0;
   }
   .news-left{
-    width: 100%;
+    gap:0
+  }
+    .notice > a{
+  display: none;
+    }
+  .news_title{
+padding: 0;
+  }
+  .news_title > h3 {
+    font-size: 16px;
+  }
+  .store {
+    padding: 0;
+  }
+    .store > a {
+      display: none;
+    }
+  .news-center {
+    padding: 0;
+  }
+   .news-center > a {
+    display: none;
+  }
+   .news_title{
+    margin: 0;
+  }
+  .news-right {
+   padding: 0;
+  }
+    .news-right >a {
+      display: none;
+    }
+  .news_title > h3,a {
+    font-size: clamp(0.8rem, 1vw, 2rem)
+  }
+  /* dlr@@@@@@@@@@@@@@@
+  왜 , 해서 인돼는지
+  */
+  .news_title >a{
+    font-size: clamp(0.8rem, 1vw, 2rem)
+  }
+}
+/*
+ @media screen and (max-width: 390px) {
+  .news-wrap {
+    padding: 50px 0;
   }
 
   .notice {
     margin-top: 20px;
     height: 55px;
-  }
-  .store {
-    margin-top: 20px;
-    height: 55px;
-  }
-  .news-center {
-    margin-top: 20px;
-    height: 55px;
-  }
-  .news-right {
-    margin-top: 20px;
-    height: 55px;
-  }
-}
-@media screen and (max-width: 390px) {
-.news-wrap{
-  padding: 50px 0 ;
- }
- 
-  .notice {
-    margin-top: 20px;
-    height: 55px;
-padding: 20px;
+    padding: 20px;
   }
   .store {
     margin-top: 20px;
@@ -163,6 +194,6 @@ padding: 20px;
     margin-bottom: 20px;
     height: 55px;
     padding: 20px;
-  }
+  } 
 }
-
+*/
