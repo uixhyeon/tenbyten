@@ -107,3 +107,170 @@ a, p ,h1, h2, h3, h4, h5, h6{
   height: 5px;
   background-color: transparent;
 }
+
+
+/* 퀵메뉴 픽스 메뉴 */
+
+.fix-menu-wrap {
+  position: fixed;
+  bottom: 60px;
+  right: 30px;
+  z-index: 99999;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+.chat-btn >img{
+ width: 35px;
+}
+
+.chat-btn span {
+  position: absolute;
+  background-color: #fff;
+  top: 34px;
+  left: -186px;
+  padding: 8px 12px;
+  border-radius: 23px;
+  box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
+  text-align: center;
+  display: none;
+  background-color: #fff;
+  
+}
+.chat-btn:hover span {
+  display: block;
+}
+.shop-btn {
+  position: relative;
+  display: block;
+ width: 40px;
+  line-height: 40px;
+  border-radius: 50%;  
+  background-color: #fff;
+  font-size: 12px;
+  font-weight: 500;
+  text-align: center;
+  box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
+}
+.top-btn {
+  position: relative;
+    width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  /* line-height: 55px; */
+  /* border-radius: 50%; */
+  background-color: #ed1c24;
+  /* text-align: center; */
+  box-shadow: 0px 3px 7px 0 rgb(0, 0, 0, 0.3);
+}
+
+.top-btn > img{
+  position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50% , -50%);
+}
+
+/* 
+@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ 
+모달창 닫기
+*/
+.modal-wrap {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 99999;
+}
+.modal-main {
+  background: #FAE7A2;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  max-width: 400px;
+  min-width: 300px;
+  /* 맥스와 민윗의 활용이 잘 안된다 */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-align: center;
+  /* border-radius: 20px; */
+  /* padding-top: 30px; */
+}
+.imageBox{
+  background-color: red;
+width: 100%;
+  aspect-ratio: 4 / 3;
+  position: relative;
+  /* overflow: hidden; */
+  /* background-imag: url("../images/popup.jpg") ; */
+  border-radius: 20px;
+}
+.imageBox > img{
+  width: 100%;
+}
+.modal-notice {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 1.5;
+  display: block;
+}
+.modal-close {
+  /* position: absolute; */
+  top: 0;
+  right:0;
+
+  background-color: transparent;
+  padding: 15px;
+  z-index: 999;
+  text-align: right;
+}
+.modal-close > i{
+color: #fff;
+
+}
+
+/* @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ */
+/* 위로가e기 미디어쿼리 */
+
+@media screen and (max-width: 1010px){
+ .fix-menu-wrap{right: 5px
+ }
+}
+@media screen and (max-width: 768px){
+  .fix-menu-wrap{
+flex-direction:row;
+right: 15px;
+bottom: 15px;
+
+  }
+.chat-btn >img{
+  width: 25px;
+}
+.shop-btn{
+ width: 30px;
+  line-height: 30px;
+  border-radius: 50%; 
+  font-size: 9px; 
+}
+.top-btn {
+    width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+} 
+
+@media screen and (max-width: 390px){
+.fix-menu-wrap {
+flex-direction:row;
+bottom: 5px;
+right: 5px
+}
+
+} 

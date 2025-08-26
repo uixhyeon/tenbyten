@@ -4,6 +4,21 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>10x10</title>
+    <!-- 파비콘 -->
+    <link
+      rel="icon"
+      type="image/png"
+      href="assets/favicon/favicon-96x96.png"
+      sizes="96x96"
+    />
+    <link rel="icon" type="image/svg+xml" href="assets/favicon/favicon.svg" />
+    <link rel="shortcut icon" href="/assets/favicon/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/favicon/apple-touch-icon.png"
+    />
+    <link rel="manifest" href="/assets/favicon/site.webmanifest" />
     <!-- seo 엔진 최적화 -->
     <!-- 웹페이지의 설명을 정의 -->
     <meta name="description" content="텐바이텐 웹사이트입니다." />
@@ -61,138 +76,161 @@
   </head>
   <body>
     <div class="wrap">
-      <!-- @헤더 -->
-      <header class="header">
-        <div class="inner header-inner">
-          <!-- 헤더-탑 -->
-          <div class="header-top">
-            <div class="header-top-inner">
-          <div class="hd-top-inner">
-            <div class="hd-top-inin">
-              <!-- 햄버거 버튼 -->
-              <button class="menu-btn" id="hamburger">
-                <i class="fa-solid fa-bars"></i>
-              </button>
+      <!-- 퀵메뉴 -->
+      <div class="fix-menu-wrap">
+        <a href="#" class="chat-btn">
+          <img src="images/cs.png" alt="chat" />
+          <span>무엇을도와드릴까요?</span>
+        </a>
+        <a href="#" class="shop-btn">10x10</a>
+        <a href="#" class="top-btn">
+          <img src="images/top-btn.png" class="top img btn" />
+        </a>
+      </div>
+      <!-- 모달창 -->
+      <div class="modal-wrap">
+        <div class="modal-main">
+          <div class="imageBox">
+            <img src="images/popup.jpg" alt="" />
+          </div>
+        </div>
+        <!-- 모달 창 닫기 -->
+        <div class="modal-close">
+          <i class="fa-solid fa-circle-xmark"></i>
+          <i> (click 하여 닫기)</i>
+        </div>
+      </div>
+    </div>
 
-              <nav class="navi navi-1">
-                <ul>
-                  <li><a href="#">계정</a></li>
-                  <li><a href="#">주문</a></li>
-                  <li>
-                    <a href="#"
-                      ><i class="fa-solid fa-cart-shopping"></i> 장바구니</a
-                    >
-                  </li>
-                  <li>
-                    <a href="#"><i class="fa-solid fa-bell"></i> 알림</a>
-                  </li>
+    <!-- @헤더 -->
+    <header class="header">
+      <div class="inner header-inner">
+        <!-- 헤더-탑 -->
+        <div class="header-top">
+          <div class="header-top-inner">
+            <div class="hd-top-inner">
+              <div class="hd-top-inin">
+                <!-- 햄버거 버튼 -->
+                <button class="menu-btn" id="hamburger">
+                  <i class="fa-solid fa-bars"></i>
+                </button>
+
+                <nav class="navi navi-1">
+                  <ul>
+                    <li><a href="#">계정</a></li>
+                    <li><a href="#">주문</a></li>
+                    <li>
+                      <a href="#"
+                        ><i class="fa-solid fa-cart-shopping"></i> 장바구니</a
+                      >
+                    </li>
+                    <li>
+                      <a href="#"><i class="fa-solid fa-bell"></i> 알림</a>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 헤더-중앙 -->
+        <div class="header-center">
+          <div class="header-center-inner">
+            <!-- 헤더-바텀-왼-로고 -->
+            <div class="main-logo">
+              <a href="#"><h1>10x10</h1></a>
+            </div>
+            <div class="search-bar">
+              <input type="text" placeholder="원하시는 상품을 검색해 보세요" />
+              <a href="#">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+        <!-- 헤더-바텀 -->
+        <div class="header-bottom">
+          <!-- 드롭다운 메뉴 박스 -->
+          <div class="menu" id="menu">
+            <ul>
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown"
+                  >디자인 문구 <i class="icon-arrow"></i
+                ></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">다이어리</a></li>
+                  <li><a href="#">플래너</a></li>
+                  <li><a href="#">오거나이저</a></li>
+                  <li><a href="#">스케줄/달력</a></li>
                 </ul>
-              </nav>
-              </div>
-            </div>
-            </div>
+              </li>
+
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown"
+                  >가구/수납 <i class="icon-arrow"></i
+                ></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">수납/정리</a></li>
+                  <li><a href="#">홈/오피스가구</a></li>
+                  <li><a href="#">주방가구</a></li>
+                  <li><a href="#">유아가구</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown"
+                  >패브릭 생활<i class="icon-arrow"></i
+                ></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">침구</a></li>
+                  <li><a href="#">홈케어</a></li>
+                  <li><a href="#">욕실용품</a></li>
+                  <li><a href="#">데코/조명</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown"
+                  >키친/푸드 <i class="icon-arrow"></i
+                ></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">주방식기</a></li>
+                  <li><a href="#">주방잡화</a></li>
+                  <li><a href="#">커피/차</a></li>
+                  <li><a href="#">건강식품</a></li>
+                  <li><a href="#">가공식품</a></li>
+                </ul>
+              </li>
+
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown"
+                  >토이/취미<i class="icon-arrow"></i
+                ></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">피규어</a></li>
+                  <li><a href="#">인형</a></li>
+                  <li><a href="#">DIY키트</a></li>
+                  <li><a href="#">레저/스포츠</a></li>
+                  <li><a href="#">캠핑용품</a></li>
+                </ul>
+              </li>
+              <li class="dropdown">
+                <a href="#" data-toggle="dropdown"
+                  >뷰티/패션<i class="icon-arrow"></i
+                ></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">헤어/바디</a></li>
+                  <li><a href="#">패션의류</a></li>
+                  <li><a href="#">스킨케어</a></li>
+                  <li><a href="#">메이크업</a></li>
+                  <li><a href="#">주얼리</a></li>
+                </ul>
+              </li>
+            </ul>
           </div>
-
-          <!-- 헤더-중앙 -->
-          <div class="header-center">
-            <div class="header-center-inner">
-              <!-- 헤더-바텀-왼-로고 -->
-              <div class="main-logo">
-                <a href="#"><h1>10x10</h1></a>
-              </div>
-              <div class="search-bar">
-                <input
-                  type="text"
-                  placeholder="원하시는 상품을 검색해 보세요"
-                />
-                <a href="#">
-                  <i class="fa-solid fa-magnifying-glass"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-          <!-- 헤더-바텀 -->
-          <div class="header-bottom">
-           
-            <!-- 드롭다운 메뉴 박스 -->
-            <div class="menu" id="menu">
-              <ul>
-                <li class="dropdown">
-                  <a href="#" data-toggle="dropdown"                 >디자인 문구 <i class="icon-arrow"></i
-                  ></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">다이어리</a></li>
-                    <li><a href="#">플래너</a></li>
-                    <li><a href="#">오거나이저</a></li>
-                    <li><a href="#">스케줄/달력</a></li>
-                  </ul>
-                </li>
-
-                <li class="dropdown">
-                  <a href="#" data-toggle="dropdown"
-                    >가구/수납 <i class="icon-arrow"></i
-                  ></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">수납/정리</a></li>
-                    <li><a href="#">홈/오피스가구</a></li>
-                    <li><a href="#">주방가구</a></li>
-                    <li><a href="#">유아가구</a></li>
-                  </ul>
-                </li>
-
-                <li class="dropdown">
-                  <a href="#" data-toggle="dropdown"
-                    >패브릭 생활<i class="icon-arrow"></i
-                  ></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">침구</a></li>
-                    <li><a href="#">홈케어</a></li>
-                    <li><a href="#">욕실용품</a></li>
-                    <li><a href="#">데코/조명</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="#" data-toggle="dropdown"
-                    >키친/푸드 <i class="icon-arrow"></i
-                  ></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">주방식기</a></li>
-                    <li><a href="#">주방잡화</a></li>
-                    <li><a href="#">커피/차</a></li>
-                    <li><a href="#">건강식품</a></li>
-                    <li><a href="#">가공식품</a></li>
-                  </ul>
-                </li>
-
-                <li class="dropdown">
-                  <a href="#" data-toggle="dropdown"
-                    >토이/취미<i class="icon-arrow"></i
-                  ></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">피규어</a></li>
-                    <li><a href="#">인형</a></li>
-                    <li><a href="#">DIY키트</a></li>
-                    <li><a href="#">레저/스포츠</a></li>
-                    <li><a href="#">캠핑용품</a></li>
-                  </ul>
-                </li>
-                <li class="dropdown">
-                  <a href="#" data-toggle="dropdown"
-                    >뷰티/패션<i class="icon-arrow"></i
-                  ></a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#">헤어/바디</a></li>
-                    <li><a href="#">패션의류</a></li>
-                    <li><a href="#">스킨케어</a></li>
-                    <li><a href="#">메이크업</a></li>
-                    <li><a href="#">주얼리</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </div>
- <div class="header-bottom-inner">
+          <div class="header-bottom-inner">
             <!-- 네비게이션 메뉴 -->
-            <nav class="header-bt-navi" >
+            <nav class="header-bt-navi">
               <ul>
                 <li>
                   <a href="#">10 다꾸존</a>
@@ -217,358 +255,375 @@
                 </li>
               </ul>
             </nav>
+          </div>
+        </div>
+      </div>
+    </header>
+    <!-- @비쥬얼-베너 -->
+
+    <!-- 비주얼베너스와이퍼 --><!-- 비주얼베너 스와이퍼 (수정본) -->
+    <div class="swiper visualSwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/bg1-1.jpg" alt="베너1" class="web-img" />
+          <img src="images/bg_t_1.png" alt="탭1" class="tab-img" />
+          <img src="images/bg1-2.png" alt="모바일 베너1" class="mo-img" />
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/bg2-1.jpg" alt="베너2" class="web-img" />
+          <img src="images/bg_t_2.png" alt="탭2" class="tab-img" />
+          <img src="images/bg2-2.png" alt="모바일 베너2" class="mo-img" />
+        </div>
+
+        <div class="swiper-slide">
+          <img src="images/bg3-1.jpg" alt="베너3" class="web-img" />
+          <img src="images/bg_t_3.png" alt="탭3" class="tab-img" />
+          <img src="images/bg3-2.png" alt="모바일 베너3" class="mo-img" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/bg4-1.jpg" alt="베너4" class="web-img" />
+          <img src="images/bg_t_4.png" alt="탭4" class="tab-img" />
+          <img src="images/bg4-2.png" alt="모바일 베너4" class="mo-img" />
+        </div>
+        <div class="swiper-slide">
+          <img src="images/bg5-1.jpg" alt="베너5" class="web-img" />
+          <img src="images/bg_t_5.png" alt="탭5" class="tab-img" />
+          <img src="images/bg5-2.png" alt="모바일 베너5" class="mo-img" />
+        </div>
+      </div>
+
+      <!-- (선택) 페이징/네비 -->
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div>
+    </div>
+    <!-- 🔚 .visualSwiper 끝 -->
+
+    <!-- @메인 -->
+    <div class="main">
+      <div class="main-inner">
+        <!-- 카드1 -->
+        <section class="card1">
+          <div class="inner card1-inner">
+            <!-- 카드1 왼 -->
+            <div class="card1-left">
+              <h2>Just 1 Day</h2>
+              <div class="space"></div>
+              <span>~62% sale</span>
+            </div>
+            <!-- 카드1 오 -->
+            <div class="card1-right">
+              <ul class="first-card card">
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/imgi_5_Frontimage20250807180258.jpg"
+                      alt="다이어리"
+                    />
+                    <p>파워UP 다이어리</p>
+                    <p><span>~62% Sale</span> 3,900원</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/imgi_6_Frontimage20250807180305.jpg"
+                      alt="미니언즈 쿠션"
+                    />
+                    <p>미니언즈 쿠션</p>
+                    <p><span>~62% Sale</span> 10,500원</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/imgi_7_Frontimage20250807180312.jpg"
+                      alt="목걸이 스트랩"
+                    />
+                    <p>목걸이 스트랩</p>
+                    <p><span>~62% Sale</span> 5,500원</p>
+                  </a>
+                </li>
+              </ul>
             </div>
           </div>
-        </div>
-      </header>
-      <!-- @비쥬얼-베너 -->
+        </section>
 
-      <!-- 비주얼베너스와이퍼 --><!-- 비주얼베너 스와이퍼 (수정본) -->
-      <div class="swiper visualSwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <img src="images/bg1-1.jpg" alt="베너1" class="web-img" />
-            <img src="images/bg_t_1.png" alt="탭1" class="tab-img" />
-            <img src="images/bg1-2.png" alt="모바일 베너1" class="mo-img" />
-          </div>
-
-          <div class="swiper-slide">
-            <img src="images/bg2-1.jpg" alt="베너2" class="web-img" />
-            <img src="images/bg_t_2.png" alt="탭2" class="tab-img" />
-            <img src="images/bg2-2.png" alt="모바일 베너2" class="mo-img" />
-          </div>
-
-          <div class="swiper-slide">
-            <img src="images/bg3-1.jpg" alt="베너3" class="web-img" />
-            <img src="images/bg_t_3.png" alt="탭3" class="tab-img" />
-            <img src="images/bg3-2.png" alt="모바일 베너3" class="mo-img" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/bg4-1.jpg" alt="베너4" class="web-img" />
-            <img src="images/bg_t_4.png" alt="탭4" class="tab-img" />
-            <img src="images/bg4-2.png" alt="모바일 베너4" class="mo-img" />
-          </div>
-          <div class="swiper-slide">
-            <img src="images/bg5-1.jpg" alt="베너5" class="web-img" />
-            <img src="images/bg_t_5.png" alt="탭5" class="tab-img" />
-            <img src="images/bg5-2.png" alt="모바일 베너5" class="mo-img" />
-          </div>
-        </div>
-
-        <!-- (선택) 페이징/네비 -->
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-      </div>
-      <!-- 🔚 .visualSwiper 끝 -->
-
-      <!-- @메인 -->
-<div class="main">
-  <div class="main-inner">
-      <!-- 카드1 -->
-      <section class="card1">
-        <div class="inner card1-inner">
-          <!-- 카드1 왼 -->
-          <div class="card1-left">
-            <h2>Just 1 Day</h2>
-            <div class="space"></div>
-            <span>~62% sale</span>
-          </div>
-          <!-- 카드1 오 -->
-          <div class="card1-right">
-            <ul class="first-card card">
-              <li>
-                <a href="#">
-                  <img
-                    src="images/imgi_5_Frontimage20250807180258.jpg"
-                    alt="다이어리"
-                  />
-                  <p>파워UP 다이어리</p>
-                  <p><span>~62% Sale</span> 3,900원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    src="images/imgi_6_Frontimage20250807180305.jpg"
-                    alt="미니언즈 쿠션"
-                  />
-                  <p>미니언즈 쿠션</p>
-                  <p><span>~62% Sale</span> 10,500원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    src="images/imgi_7_Frontimage20250807180312.jpg"
-                    alt="목걸이 스트랩"
-                  />
-                  <p>목걸이 스트랩</p>
-                  <p><span>~62% Sale</span> 5,500원</p>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- 카드2 -->
-      <section class="card2">
-        <div class="inner card2-inner">
-          <div class="card2-left">
-            <h2><strong>MD's</strong> Pick</h2>
-          <div class="space"></div>
-            <p>텐바이텐 엠디가</p>
-            <p>자신있게 추천합니다</p>
-          </div>
-          <div class="card2-right">
-            <ul class="second-card card">
-              <li>
-                <a href="#">
-                  <img src="images/imgi_8_T003936959.jpg" alt="베이직 텀블러" />
-                  <p>베이직 텀블러</p>
-                  <p><span>~62% Sale</span> 9,800원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    src="images/imgi_11_optimize.jpg"
-                    alt="드로잉 마커 Set"
-                  />
-                  <p>포컷 다이어리 Set</p>
-                  <p><span>~62% Sale</span> 8,300원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    src="images/imgi_12_optimize.jpg"
-                    alt="스마트 충전 시계"
-                  />
-                  <p>스마트 충전 시계</p>
-                  <p><span>~62% Sale</span> 15,200원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    src="images/imgi_13_optimize.jpg"
-                    alt="피크닉 보냉 가방"
-                  />
-                  <p>피크닉 보냉 가방</p>
-                  <p><span>~62% Sale</span> 11,500원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    src="images/imgi_14_optimize.jpg"
-                    alt="시나모롤 텀블러"
-                  />
-                  <p>시나모롤 텀블러</p>
-                  <p><span>~62% Sale</span> 9200원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    src="images/imgi_15_optimize.jpg"
-                    alt="시나모롤 컵 커버 "
-                  />
-                  <p>시나모롤 컵 커버</p>
-                  <p><span>~62% Sale</span> 3900원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/imgi_20_optimize.jpg" alt="테이블 정리함" />
-                  <p>테이블 정리함</p>
-                  <p><span>~62% Sale</span>12,700원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/imgi_22_optimize.jpg" alt="다이어리 내지" />
-                  <p>다이어리 내지</p>
-                  <p><span>~62% Sale</span> 3800원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    src="images/imgi_24_optimize.jpg"
-                    alt="위비베어 파우치"
-                  />
-                  <p>위비베어 파우치</p>
-                  <p><span>~62% Sale</span> 10,500원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/imgi_32_B006933413.jpg" alt="비즈 스트랩" />
-                  <p>비즈 스트랩</p>
-                  <p><span>~62% Sale</span> 7,200원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    src="images/imgi_33_B006265412-2.jpg"
-                    alt="키티 Package"
-                  />
-                  <p>키티 Package</p>
-                  <p><span>~62% Sale</span> 13,900원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    src="images/imgi_34_B005683135-2.jpg"
-                    alt="스누피 접시"
-                  />
-                  <p>스누피 접시</p>
-                  <p><span>~62% Sale</span> 13,000원</p>
-                </a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <!-- 카드3 -->
-      <section class="card3">
-        <div class="inner card3-inner">
-          <div class="card3-top">
-            <h2>Today's Best</h2>
-         <div class="space"></div>
-            <p>오늘의 최대매출</p>
-          </div>
-          <div class="card3-bottom">
-            <ul class="third-card card">
-              <li>
-                <a href="#">
-                  <div class="box">
+        <!-- 카드2 -->
+        <section class="card2">
+          <div class="inner card2-inner">
+            <div class="card2-left">
+              <h2><strong>MD's</strong> Pick</h2>
+              <div class="space"></div>
+              <p>텐바이텐 엠디가</p>
+              <p>자신있게 추천합니다</p>
+            </div>
+            <div class="card2-right">
+              <ul class="second-card card">
+                <li>
+                  <a href="#">
                     <img
-                      src="images/imgi_26_banMoList20250804152421.jpg"
-                      alt="피크닉 도시락 세트"
+                      src="images/imgi_8_T003936959.jpg"
+                      alt="베이직 텀블러"
                     />
-                  </div>
-                  <p>피크닉 도시락 세트</p>
-                  <p><span>~62% Sale</span> 17,300원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div class="box">
+                    <p>베이직 텀블러</p>
+                    <p><span>~62% Sale</span> 9,800원</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
                     <img
-                      src="images/imgi_27_banMoList20250728093504.jpg"
-                      alt="습관 플래너"
+                      src="images/imgi_11_optimize.jpg"
+                      alt="드로잉 마커 Set"
                     />
-                  </div>
-                  <p>습관 플래너</p>
-                  <p><span>~62% Sale</span> 10,900원</p>
-                </a>
-              </li>
-            </ul>
-            <ul class="third-card card">
-              <li>
-                <a href="#">
-                  <div class="box">
+                    <p>포컷 다이어리 Set</p>
+                    <p><span>~62% Sale</span> 8,300원</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
                     <img
-                      src="images/imgi_28_banMoList20250729135521.jpg"
-                      alt="Peach 마스킹 테이프"
+                      src="images/imgi_12_optimize.jpg"
+                      alt="스마트 충전 시계"
                     />
-                  </div>
-                  <p>Peach 마스킹 테이프</p>
-                  <p><span>~62% Sale</span> 6,300원</p>
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <div class="box">
+                    <p>스마트 충전 시계</p>
+                    <p><span>~62% Sale</span> 15,200원</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
                     <img
-                      src="images/imgi_29_banMoList20250731174545.jpg"
-                      alt="스터디 플래너"
+                      src="images/imgi_13_optimize.jpg"
+                      alt="피크닉 보냉 가방"
                     />
-                  </div>
-                  <p>스터디 플래너</p>
-                  <p><span>~62% Sale</span> 10,900원</p>
-                </a>
-              </li>
-            </ul>
+                    <p>피크닉 보냉 가방</p>
+                    <p><span>~62% Sale</span> 11,500원</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/imgi_14_optimize.jpg"
+                      alt="시나모롤 텀블러"
+                    />
+                    <p>시나모롤 텀블러</p>
+                    <p><span>~62% Sale</span> 9200원</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/imgi_15_optimize.jpg"
+                      alt="시나모롤 컵 커버 "
+                    />
+                    <p>시나모롤 컵 커버</p>
+                    <p><span>~62% Sale</span> 3900원</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/imgi_20_optimize.jpg"
+                      alt="테이블 정리함"
+                    />
+                    <p>테이블 정리함</p>
+                    <p><span>~62% Sale</span>12,700원</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/imgi_22_optimize.jpg"
+                      alt="다이어리 내지"
+                    />
+                    <p>다이어리 내지</p>
+                    <p><span>~62% Sale</span> 3800원</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/imgi_24_optimize.jpg"
+                      alt="위비베어 파우치"
+                    />
+                    <p>위비베어 파우치</p>
+                    <p><span>~62% Sale</span> 10,500원</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/imgi_32_B006933413.jpg"
+                      alt="비즈 스트랩"
+                    />
+                    <p>비즈 스트랩</p>
+                    <p><span>~62% Sale</span> 7,200원</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/imgi_33_B006265412-2.jpg"
+                      alt="키티 Package"
+                    />
+                    <p>키티 Package</p>
+                    <p><span>~62% Sale</span> 13,900원</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/imgi_34_B005683135-2.jpg"
+                      alt="스누피 접시"
+                    />
+                    <p>스누피 접시</p>
+                    <p><span>~62% Sale</span> 13,000원</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </section>
-      <!-- 카드4 -->
-      <section class="card4">
-        <div class="inner card4-inner">
-          <div class="card4-left">
-            <h2>Other's Pick</h2>
-          <div class="space"></div>
-            <p>조회수 급상승</p>
+        </section>
+        <!-- 카드3 -->
+        <section class="card3">
+          <div class="inner card3-inner">
+            <div class="card3-top">
+              <h2>Today's Best</h2>
+              <div class="space"></div>
+              <p>오늘의 최대매출</p>
+            </div>
+            <div class="card3-bottom">
+              <ul class="third-card card">
+                <li>
+                  <a href="#">
+                    <div class="box">
+                      <img
+                        src="images/imgi_26_banMoList20250804152421.jpg"
+                        alt="피크닉 도시락 세트"
+                      />
+                    </div>
+                    <p>피크닉 도시락 세트</p>
+                    <p><span>~62% Sale</span> 17,300원</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="box">
+                      <img
+                        src="images/imgi_27_banMoList20250728093504.jpg"
+                        alt="습관 플래너"
+                      />
+                    </div>
+                    <p>습관 플래너</p>
+                    <p><span>~62% Sale</span> 10,900원</p>
+                  </a>
+                </li>
+              </ul>
+              <ul class="third-card card">
+                <li>
+                  <a href="#">
+                    <div class="box">
+                      <img
+                        src="images/imgi_28_banMoList20250729135521.jpg"
+                        alt="Peach 마스킹 테이프"
+                      />
+                    </div>
+                    <p>Peach 마스킹 테이프</p>
+                    <p><span>~62% Sale</span> 6,300원</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <div class="box">
+                      <img
+                        src="images/imgi_29_banMoList20250731174545.jpg"
+                        alt="스터디 플래너"
+                      />
+                    </div>
+                    <p>스터디 플래너</p>
+                    <p><span>~62% Sale</span> 10,900원</p>
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div class="card4-right">
-            <ul class="fourth-card">
-              <li>
-                <a href="#">
-                  <img src="images/imgi_52_B003868946-4.jpg" alt="푸 쿠션" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/imgi_36_B003511660.jpg" alt="커피컵" />
-                </a>
-              </li>
-              <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+        </section>
+        <!-- 카드4 -->
+        <section class="card4">
+          <div class="inner card4-inner">
+            <div class="card4-left">
+              <h2>Other's Pick</h2>
+              <div class="space"></div>
+              <p>조회수 급상승</p>
+            </div>
+            <div class="card4-right">
+              <ul class="fourth-card">
+                <li>
+                  <a href="#">
+                    <img src="images/imgi_52_B003868946-4.jpg" alt="푸 쿠션" />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img src="images/imgi_36_B003511660.jpg" alt="커피컵" />
+                  </a>
+                </li>
+                <!-- @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
               사진이 임미지 않에 없음  
               -->
-              <li>
-                <a href="#">
-                  <img src="images/imgi_38_B006818455.jpg" alt="마스킹테이프" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    src="images/imgi_48_B006341907-1.jpg"
-                    alt="극세사 인형"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img src="images/imgi_64_B002068094.jpg" alt="토토로 인형" />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    src="images/imgi_117_B000186055.jpg"
-                    alt="펌킨인형 만들기"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    src="images/imgi_105_B003019218-6.jpg"
-                    alt="스누피 테이블"
-                  />
-                </a>
-              </li>
-              <li>
-                <a href="#">
-                  <img
-                    src="images/imgi_95_B005950827-1.jpg"
-                    alt="행운 스티커"
-                  />
-                </a>
-              </li>
-            </ul>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/imgi_38_B006818455.jpg"
+                      alt="마스킹테이프"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/imgi_48_B006341907-1.jpg"
+                      alt="극세사 인형"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/imgi_64_B002068094.jpg"
+                      alt="토토로 인형"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/imgi_117_B000186055.jpg"
+                      alt="펌킨인형 만들기"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/imgi_105_B003019218-6.jpg"
+                      alt="스누피 테이블"
+                    />
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <img
+                      src="images/imgi_95_B005950827-1.jpg"
+                      alt="행운 스티커"
+                    />
+                  </a>
+                </li>
+              </ul>
+            </div>
           </div>
-        </div>
-      </section>
-      
+        </section>
       </div>
       <!-- 뉴스 -->
       <div class="news-wrap">
@@ -577,7 +632,7 @@
             <div class="notice news-scr">
               <div class="news_title">
                 <h3>공지사항</h3>
-                
+
                 <a href="#">보기></a>
               </div>
 
@@ -605,9 +660,9 @@
             <a href="#"><p>텐바이텐 기프트카드</p></a>
             <a href="#"><p>텐바이텐 멤버쉽카드</p></a>
             <a href="#"><p>선물포장 서비스</p></a>
-     
+
             <a href="#"><p>고마워 텐바이텐</p></a>
-      
+
             <a href="#"><p>기프티콘 상품교환</p></a>
             <a href="#"><p>비회원 메일신청</p></a>
           </div>
@@ -659,7 +714,6 @@
           </div>
           <!-- 푸터-바텀 -->
           <div class="footer-bottom">
-        
             <!-- 푸터-왼 -->
             <div class="ft-left sub-logo">
               <a href="#">
@@ -679,24 +733,24 @@
                 사업자등록번호 : 211-87-00620 / 통신판매업 신고 :
                 2024-서울서초-1568 <a href="#">사업자 정보확인 ></a>
               </p>
-           <div class="space"></div>
-           <!-- @@@@@@@@@@@@@@@@ > 바꾸기 -->
-           <p>
-             전화번호 : 1644-6030 / E-mail : customer@10x10.co.kr<br>
-             개인정보보호책임자 : 김동철 / 소비자피해보상보험 SGI 서울보증
-             <a href="#">서비스 가입 사실 확인 ></a>
-            </p>
-            
-            <p>호스팅서비스:㈜텐바이텐</p>
-          
-            <div class="space"></div>
+              <div class="space"></div>
+              <!-- @@@@@@@@@@@@@@@@ > 바꾸기 -->
+              <p>
+                전화번호 : 1644-6030 / E-mail : customer@10x10.co.kr<br />
+                개인정보보호책임자 : 김동철 / 소비자피해보상보험 SGI 서울보증
+                <a href="#">서비스 가입 사실 확인 ></a>
+              </p>
+
+              <p>호스팅서비스:㈜텐바이텐</p>
+
+              <div class="space"></div>
               <p>
                 사이트 내 판매 상품 중 일부는 ㈜텐바이텐에 입점한 개별판매자가
-                판매하는 상품이 포함되어 있습니다.<br> 해당 상품의 경우 ㈜텐바이텐은
-                통신판매중개자로서 판매 당사자가 아니며, 상품정보 및 거래 등에
-                대한 책임을 지지 않습니다.
+                판매하는 상품이 포함되어 있습니다.<br />
+                해당 상품의 경우 ㈜텐바이텐은 통신판매중개자로서 판매 당사자가
+                아니며, 상품정보 및 거래 등에 대한 책임을 지지 않습니다.
               </p>
-               <div class="space"></div>
+              <div class="space"></div>
               <p>COPYRIGHT © TENBYTEN ALL RIGHTS RESERVED.</p>
             </div>
             <!-- 푸터-오 -->

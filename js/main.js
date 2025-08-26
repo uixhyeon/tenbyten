@@ -69,9 +69,9 @@ dropdowns.forEach(function (dr) {
 
   //시작
   //토글기능
-  drBtn.addEventListener("click", function (e) {
+  drBtn.addEventListener("click", function (t) {
     // button → drBtn 수정
-    e.preventDefault(); // a태그 기본 동작 막기
+    t.preventDefault(); // a태그 기본 동작 막기
 
     const openB = drSubmenu.classList.contains("show");
     if (openB) {
@@ -116,4 +116,41 @@ window.addEventListener("load", function () {
   //끝
 
   //윈도우 로드 닫기
+});
+// @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+
+window.addEventListener("load", function () {
+  //   모든 a 태그 기본동작 막기
+  const links = this.document.querySelectorAll("a");
+  links.forEach(function (link) {
+    link.addEventListener("click", function (event) {
+      event.preventDefault(); // 위로가기 방지
+    });
+  }); // ← forEach 닫는 괄호와 세미콜론 여기!
+
+  // 스크롤 이벤트
+  const topBtn = this.document.querySelector(".top-btn");
+  this.window.addEventListener("scroll", function () {
+    if (this.document.documentElement.scrollTop > 100) {
+      topBtn.style.display = "block";
+    } else {
+      topBtn.style.display = "none";
+    }
+  });
+
+  topBtn.addEventListener("click", function () {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  });
+});
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
+window.addEventListener("load", function () {
+  // 모달창 닫기
+  const modal = this.document.querySelector(".modal-wrap");
+  const modalClose = this.document.querySelector(".modal-close");
+  modalClose.addEventListener("click", function () {
+    modal.style.display = "none";
+  });
 });
