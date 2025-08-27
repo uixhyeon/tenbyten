@@ -59,6 +59,7 @@ card res 같이 줄이면 줄어들게 해보자.
   어떤역할을 하는지 모르겠다 */
   gap: 2%;
   margin: auto;
+  padding: 20px;
   flex-wrap: nowrap;
 }
 .first-card > li {
