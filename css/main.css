@@ -143,7 +143,7 @@ h6 {
   text-align: center;
   display: none;
   /* 지우기 */
-  display: block;
+  /* display: block; */
   background-color: #fff;
 }
 .chat-btn:hover span {
